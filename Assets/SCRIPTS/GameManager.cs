@@ -308,9 +308,16 @@ public class GameManager : MonoBehaviour
             ObjsCarrera[i].SetActiveRecursively(false);
         }
 
-
-        Player1.CambiarACalibracion();
-        Player2.CambiarACalibracion();
+        switch (ModoActual)
+        {
+            case ModoDeJuego.SinglePlayer:
+                Player1.CambiarACalibracion();
+                break;
+            case ModoDeJuego.LocalMultiplayer:
+                Player1.CambiarACalibracion();
+                Player2.CambiarACalibracion();
+                break;
+        }
     }
 
     /*
@@ -373,40 +380,56 @@ public class GameManager : MonoBehaviour
 
     void FinalizarCarrera()
     {
-        EstAct = GameManager.EstadoJuego.Finalizado;
+        EstAct = EstadoJuego.Finalizado;
 
         TiempoDeJuego = 0;
 
-        if (Player1.Dinero > Player2.Dinero)
+        switch (ModoActual)
         {
-            //lado que gano
-            if (PlayerInfo1.LadoAct == Visualizacion.Lado.Der)
-                DatosPartida.LadoGanadaor = DatosPartida.Lados.Der;
-            else
-                DatosPartida.LadoGanadaor = DatosPartida.Lados.Izq;
+            case ModoDeJuego.SinglePlayer:
 
-            //puntajes
-            DatosPartida.PtsGanador = Player1.Dinero;
-            DatosPartida.PtsPerdedor = Player2.Dinero;
+                if (PlayerInfo1.LadoAct == Visualizacion.Lado.Centro)
+                    DatosPartida.LadoGanadaor = DatosPartida.Lados.None;
+
+                DatosPartida.PtsGanador = Player1.Dinero;
+                Player1.GetComponent<Frenado>().Frenar();
+                Player1.ContrDesc.FinDelJuego();
+
+                break;
+            case ModoDeJuego.LocalMultiplayer:
+
+                if (Player1.Dinero > Player2.Dinero)
+                {
+                    //lado que gano
+                    if (PlayerInfo1.LadoAct == Visualizacion.Lado.Der)
+                        DatosPartida.LadoGanadaor = DatosPartida.Lados.Der;
+                    else
+                        DatosPartida.LadoGanadaor = DatosPartida.Lados.Izq;
+
+                    //puntajes
+                    DatosPartida.PtsGanador = Player1.Dinero;
+                    DatosPartida.PtsPerdedor = Player2.Dinero;
+                }
+                else
+                {
+                    //lado que gano
+                    if (PlayerInfo2.LadoAct == Visualizacion.Lado.Der)
+                        DatosPartida.LadoGanadaor = DatosPartida.Lados.Der;
+                    else
+                        DatosPartida.LadoGanadaor = DatosPartida.Lados.Izq;
+
+                    //puntajes
+                    DatosPartida.PtsGanador = Player2.Dinero;
+                    DatosPartida.PtsPerdedor = Player1.Dinero;
+                }
+
+                Player1.GetComponent<Frenado>().Frenar();
+                Player2.GetComponent<Frenado>().Frenar();
+
+                Player1.ContrDesc.FinDelJuego();
+                Player2.ContrDesc.FinDelJuego();
+                break;
         }
-        else
-        {
-            //lado que gano
-            if (PlayerInfo2.LadoAct == Visualizacion.Lado.Der)
-                DatosPartida.LadoGanadaor = DatosPartida.Lados.Der;
-            else
-                DatosPartida.LadoGanadaor = DatosPartida.Lados.Izq;
-
-            //puntajes
-            DatosPartida.PtsGanador = Player2.Dinero;
-            DatosPartida.PtsPerdedor = Player1.Dinero;
-        }
-
-        Player1.GetComponent<Frenado>().Frenar();
-        Player2.GetComponent<Frenado>().Frenar();
-
-        Player1.ContrDesc.FinDelJuego();
-        Player2.ContrDesc.FinDelJuego();
     }
 
     /*
@@ -514,7 +537,16 @@ public class GameManager : MonoBehaviour
                     Player1.gameObject.transform.position = PosCamionesCarrera[2];
                 }
 
-                    break;
+                Player1.transform.forward = Vector3.forward;
+                Player1.GetComponent<Frenado>().Frenar();
+                Player1.CambiarAConduccion();
+
+                Player1.GetComponent<Frenado>().RestaurarVel();
+                Player1.GetComponent<ControlDireccion>().Habilitado = false;
+
+                Player1.transform.forward = Vector3.forward;
+                EstAct = EstadoJuego.Jugando;
+                break;
             case ModoDeJuego.LocalMultiplayer:
 
                 //posiciona los camiones dependiendo de que lado de la pantalla esten
@@ -528,27 +560,28 @@ public class GameManager : MonoBehaviour
                     Player1.gameObject.transform.position = PosCamionesCarrera[1];
                     Player2.gameObject.transform.position = PosCamionesCarrera[0];
                 }
+
+                Player1.transform.forward = Vector3.forward;
+                Player1.GetComponent<Frenado>().Frenar();
+                Player1.CambiarAConduccion();
+
+                Player2.transform.forward = Vector3.forward;
+                Player2.GetComponent<Frenado>().Frenar();
+                Player2.CambiarAConduccion();
+
+                //los deja andando
+                Player1.GetComponent<Frenado>().RestaurarVel();
+                Player2.GetComponent<Frenado>().RestaurarVel();
+                //cancela la direccion
+                Player1.GetComponent<ControlDireccion>().Habilitado = false;
+                Player2.GetComponent<ControlDireccion>().Habilitado = false;
+                //les de direccion
+                Player1.transform.forward = Vector3.forward;
+                Player2.transform.forward = Vector3.forward;
+
+                EstAct = GameManager.EstadoJuego.Jugando;
                 break;
         }
-        Player1.transform.forward = Vector3.forward;
-        Player1.GetComponent<Frenado>().Frenar();
-        Player1.CambiarAConduccion();
-
-        Player2.transform.forward = Vector3.forward;
-        Player2.GetComponent<Frenado>().Frenar();
-        Player2.CambiarAConduccion();
-
-        //los deja andando
-        Player1.GetComponent<Frenado>().RestaurarVel();
-        Player2.GetComponent<Frenado>().RestaurarVel();
-        //cancela la direccion
-        Player1.GetComponent<ControlDireccion>().Habilitado = false;
-        Player2.GetComponent<ControlDireccion>().Habilitado = false;
-        //les de direccion
-        Player1.transform.forward = Vector3.forward;
-        Player2.transform.forward = Vector3.forward;
-
-        EstAct = GameManager.EstadoJuego.Jugando;
     }
 
     public void FinTutorial(int playerID)

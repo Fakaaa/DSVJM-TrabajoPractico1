@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/ESCENAS/SinglePlayer.unity
     guid: 32047c35e30ab3249b4dd8562313e6b9
   - enabled: 1
+    path: Assets/ESCENAS/PtsFinal Singleplayer.unity
+    guid: 977efea63b844fa4fbeb13b36845dfaa
+  - enabled: 1
     path: Assets/ESCENAS/PtsFinal.unity
     guid: 3fed48a553168ae458bbf014c512a5cd
   m_configObjects: {}
