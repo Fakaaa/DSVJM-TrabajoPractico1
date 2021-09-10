@@ -16,8 +16,18 @@ public class Deposito2 : MonoBehaviour
 
 	void Start () 
 	{
-		Contr1 = GameObject.Find("ContrDesc1").GetComponent<ControladorDeDescarga>();
-		Contr2 = GameObject.Find("ContrDesc2").GetComponent<ControladorDeDescarga>();
+		if(GameManager.Instancia != null)
+        {
+			if(GameManager.Instancia.ModoActual == GameManager.ModoDeJuego.LocalMultiplayer)
+            {
+				Contr1 = GameObject.Find("ContrDesc1").GetComponent<ControladorDeDescarga>();
+				Contr2 = GameObject.Find("ContrDesc2").GetComponent<ControladorDeDescarga>();
+            }
+            else
+            {
+				Contr1 = GameObject.Find("ContrDesc1").GetComponent<ControladorDeDescarga>();
+            }
+        }
 		
 		Physics.IgnoreLayerCollision(8,9,false);
 	}
@@ -48,8 +58,6 @@ public class Deposito2 : MonoBehaviour
 		
 		PjActual = null;
 		Vacio = true;
-		
-	
 	}
 	
 	public void Entrar(Player pj)
@@ -77,9 +85,20 @@ public class Deposito2 : MonoBehaviour
 	
 	public void Entro()
 	{		
+
 		if(PjActual.IdPlayer == 0)
-			Contr1.Activar(this);
+        {
+			if(Contr1 != null)
+            {
+				Contr1.Activar(this);
+            }
+        }
 		else
-			Contr2.Activar(this);
+        {
+			if(Contr2 != null)
+			{
+				Contr2.Activar(this);
+			}
+        }
 	}
 }

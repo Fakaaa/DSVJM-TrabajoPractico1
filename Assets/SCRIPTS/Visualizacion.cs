@@ -8,7 +8,7 @@ using System.Collections;
 /// </summary>
 public class Visualizacion : MonoBehaviour 
 {
-	public enum Lado{Izq, Der}
+	public enum Lado{Izq, Der, Centro}
 	public Lado LadoAct;
 	
 	ControlDireccion Direccion;
@@ -87,10 +87,7 @@ public class Visualizacion : MonoBehaviour
 	public Texture2D TextNum1; 
 	public Texture2D TextNum2;
 	public GameObject Techo;
-	
-	
-	
-	
+		
 	Rect R;
 	
 	//------------------------------------------------------------------//
@@ -102,13 +99,6 @@ public class Visualizacion : MonoBehaviour
 		Direccion = GetComponent<ControlDireccion>();
 		Pj = GetComponent<Player>();
 	}
-	
-	// Update is called once per frame
-	void Update () 
-	{
-		
-	}
-	
 	void OnGUI()
 	{	
 		switch(Pj.EstAct)
@@ -185,6 +175,9 @@ public class Visualizacion : MonoBehaviour
 	
 	public void SetLado(Lado lado)
 	{
+		if (lado == Lado.Centro)
+			return;
+
 		LadoAct = lado;
 		
 		Rect r = new Rect();

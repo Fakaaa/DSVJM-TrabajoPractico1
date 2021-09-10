@@ -77,7 +77,7 @@ public class Frenado : MonoBehaviour
 	{
 		//Debug.Log(gameObject.name + "frena");
 		GetComponent<ControlDireccion>().enabled = false;
-		gameObject.SendMessage("SetAcel", 0f);
+		//gameObject.SendMessage("SetAcel", 0f);
 		GetComponent<Rigidbody>().velocity = Vector3.zero;
 		
 		Frenando = true;

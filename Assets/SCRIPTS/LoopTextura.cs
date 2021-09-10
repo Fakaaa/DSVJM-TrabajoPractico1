@@ -7,16 +7,16 @@ public class LoopTextura : MonoBehaviour
 	float Tempo = 0;
 	
 	public Sprite[] Imagenes;
-	public Image canvasImage;
+	public Image CanvasImage;
 	int Contador = 0;
 
 	// Use this for initialization
 	void Start () 
 	{
-		canvasImage = GetComponent<Image>();
+		CanvasImage = GetComponent<Image>();
 		if (Imagenes.Length > 0)
         {
-			canvasImage.sprite = Imagenes[0];
+			CanvasImage.sprite = Imagenes[0];
 			//GetComponent<Renderer>().material.mainTexture = Imagenes[0];
         }
 	}
@@ -34,7 +34,7 @@ public class LoopTextura : MonoBehaviour
 			{
 				Contador = 0;
 			}
-			canvasImage.sprite = Imagenes[Contador];
+			CanvasImage.sprite = Imagenes[Contador];
 			//GetComponent<Renderer>().material.mainTexture = Imagenes[Contador];
 		}
 	}

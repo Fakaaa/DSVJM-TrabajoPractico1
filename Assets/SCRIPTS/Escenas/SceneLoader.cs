@@ -3,34 +3,34 @@ using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour
 {
-    private static SceneLoader instance;
+    private static SceneLoader Instance;
 
     public static SceneLoader Get()
     {
-        return instance;
+        return Instance;
     }
 
     void Awake()
     {
-        if(instance != null)
+        if(Instance != null)
         {
             Destroy(gameObject);
             return;
         }
-        instance = this;
+        Instance = this;
         DontDestroyOnLoad(gameObject);
     }
 
     public void LoadScene(string sceneName)
     {
-        Scene auxSene = SceneManager.GetSceneByName(sceneName);
-        if(auxSene != null)
+        Scene AuxSene = SceneManager.GetSceneByName(sceneName);
+        if(AuxSene != null)
             SceneManager.LoadScene(sceneName);
     }
     public void LoadScene(int indexScene)
     {
-        Scene auxSene = SceneManager.GetSceneByBuildIndex(indexScene);
-        if(auxSene != null)
+        Scene AuxSene = SceneManager.GetSceneByBuildIndex(indexScene);
+        if(AuxSene != null)
             SceneManager.LoadScene(indexScene);
     }
 }

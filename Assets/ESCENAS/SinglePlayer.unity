@@ -18353,7 +18353,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &2684
 GameObject:
   m_ObjectHideFlags: 0
@@ -25473,7 +25473,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &3093
 GameObject:
   m_ObjectHideFlags: 0
@@ -25787,7 +25787,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &3126
 GameObject:
   m_ObjectHideFlags: 0
@@ -25822,7 +25822,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &3144
 GameObject:
   m_ObjectHideFlags: 0
@@ -49285,9 +49285,9 @@ Camera:
   m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.5
+    x: 0
     y: 0
-    width: 0.5
+    width: 1
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
@@ -49316,7 +49316,7 @@ Camera:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3093}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_ClearFlags: 1
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0.019607844}
@@ -49330,7 +49330,7 @@ Camera:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 0.5
+    width: 0
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
@@ -49371,9 +49371,9 @@ Camera:
   m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.5
+    x: 0
     y: 0
-    width: 0.5
+    width: 1
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
@@ -49414,9 +49414,9 @@ Camera:
   m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.5
+    x: 0
     y: 0
-    width: 0.5
+    width: 1
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
@@ -102972,7 +102972,7 @@ MonoBehaviour:
   - {fileID: 2800000, guid: 2c9ac95f461fb0448aca4408de9647dc, type: 3}
   - {fileID: 2800000, guid: f836f4a482f17844b801b9ceb13c1f8a, type: 3}
   - {fileID: 2800000, guid: b7e088a57ed74ae4ebb26597dfb96cd7, type: 3}
-  canvasImage: {fileID: 0}
+  CanvasImage: {fileID: 0}
 --- !u!114 &12568
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -102990,7 +102990,7 @@ MonoBehaviour:
   - {fileID: 2800000, guid: 2c9ac95f461fb0448aca4408de9647dc, type: 3}
   - {fileID: 2800000, guid: f836f4a482f17844b801b9ceb13c1f8a, type: 3}
   - {fileID: 2800000, guid: b7e088a57ed74ae4ebb26597dfb96cd7, type: 3}
-  canvasImage: {fileID: 0}
+  CanvasImage: {fileID: 0}
 --- !u!114 &12641
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -103003,17 +103003,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b714c2aa2dd4752478b0be8db1bfa03b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  imagenesDelTutoImg:
+  ImagenesDelTutoImg:
   - {fileID: 21300000, guid: 2c9ac95f461fb0448aca4408de9647dc, type: 3}
   - {fileID: 21300000, guid: f836f4a482f17844b801b9ceb13c1f8a, type: 3}
   - {fileID: 21300000, guid: b7e088a57ed74ae4ebb26597dfb96cd7, type: 3}
   Intervalo: 1.5
-  imagenesDeCalibImg:
+  ImagenesDeCalibImg:
   - {fileID: 21300000, guid: 7728fa8ba9181fe4ebdcb8509838f013, type: 3}
   - {fileID: 21300000, guid: e7070f5025303a04f8753dd8acb5245e, type: 3}
-  imaReady: {fileID: 21300000, guid: cd96293139f94fb4b925e67c2069bc43, type: 3}
+  ImaReady: {fileID: 21300000, guid: cd96293139f94fb4b925e67c2069bc43, type: 3}
   ContrCalib: {fileID: 13045}
-  mainImage: {fileID: 583}
+  MainImage: {fileID: 583}
 --- !u!114 &12642
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -103026,17 +103026,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b714c2aa2dd4752478b0be8db1bfa03b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  imagenesDelTutoImg:
+  ImagenesDelTutoImg:
   - {fileID: 21300000, guid: 2c9ac95f461fb0448aca4408de9647dc, type: 3}
   - {fileID: 21300000, guid: f836f4a482f17844b801b9ceb13c1f8a, type: 3}
   - {fileID: 21300000, guid: b7e088a57ed74ae4ebb26597dfb96cd7, type: 3}
   Intervalo: 1.5
-  imagenesDeCalibImg:
+  ImagenesDeCalibImg:
   - {fileID: 21300000, guid: 7728fa8ba9181fe4ebdcb8509838f013, type: 3}
   - {fileID: 21300000, guid: e7070f5025303a04f8753dd8acb5245e, type: 3}
-  imaReady: {fileID: 21300000, guid: cd96293139f94fb4b925e67c2069bc43, type: 3}
+  ImaReady: {fileID: 21300000, guid: cd96293139f94fb4b925e67c2069bc43, type: 3}
   ContrCalib: {fileID: 13048}
-  mainImage: {fileID: 584}
+  MainImage: {fileID: 584}
 --- !u!114 &12643
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -104572,7 +104572,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3091}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 415a3c16e2454b8429f5d1e1dc71052c, type: 3}
   m_Name: 
@@ -104751,6 +104751,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TiempoDeJuego: 60
   EstAct: 0
+  ModoActual: 0
   PlayerInfo1:
     FinCalibrado: 0
     FinTuto1: 0
@@ -104791,6 +104792,7 @@ MonoBehaviour:
   PosCamionesCarrera:
   - {x: -17.5, y: 1, z: 5243}
   - {x: -4.2, y: 1, z: 5243}
+  - {x: -10.62, y: 1, z: 5243}
   PosCamion1Tuto: {x: 11.5, y: 6004.3, z: 5014.5}
   PosCamion2Tuto: {x: -257.3, y: 6004.3, z: 5014.5}
   ObjsCalibracion1:
@@ -118356,6 +118358,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Camion - new 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1753749050268706, guid: b81b1a58a0f14c9439cbdd014e695f71, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4827866222774608, guid: b81b1a58a0f14c9439cbdd014e695f71, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -118628,7 +118634,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 2c9ac95f461fb0448aca4408de9647dc, type: 3}
   - {fileID: 21300000, guid: f836f4a482f17844b801b9ceb13c1f8a, type: 3}
   - {fileID: 21300000, guid: b7e088a57ed74ae4ebb26597dfb96cd7, type: 3}
-  canvasImage: {fileID: 392627555}
+  CanvasImage: {fileID: 0}
 --- !u!114 &392627555
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -118683,7 +118689,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4827866222774608, guid: b81b1a58a0f14c9439cbdd014e695f71, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -17.5
+      value: -10.62
       objectReference: {fileID: 0}
     - target: {fileID: 4827866222774608, guid: b81b1a58a0f14c9439cbdd014e695f71, type: 3}
       propertyPath: m_LocalPosition.y
@@ -118791,7 +118797,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 2c9ac95f461fb0448aca4408de9647dc, type: 3}
   - {fileID: 21300000, guid: f836f4a482f17844b801b9ceb13c1f8a, type: 3}
   - {fileID: 21300000, guid: b7e088a57ed74ae4ebb26597dfb96cd7, type: 3}
-  canvasImage: {fileID: 829506579}
+  CanvasImage: {fileID: 0}
 --- !u!114 &829506579
 MonoBehaviour:
   m_ObjectHideFlags: 0
