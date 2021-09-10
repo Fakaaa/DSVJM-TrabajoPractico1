@@ -1,27 +1,32 @@
 using UnityEngine;
-using System.Collections;
+using UnityEngine.UI;
 
 public class PantallaCalibTuto : MonoBehaviour 
 {
-	public Texture2D[] ImagenesDelTuto;
+	//public Texture2D[] ImagenesDelTuto;
+	//-------------------------------
+	public Sprite[] imagenesDelTutoImg;
+	//-------------------------------
 	public float Intervalo = 1.2f;//tiempo de cada cuanto cambia de imagen
 	float TempoIntTuto = 0;
 	int EnCursoTuto = 0;
 	
-	public Texture2D[] ImagenesDeCalib;
+	//public Texture2D[] ImagenesDeCalib;
+	//-------------------------------
+	public Sprite[] imagenesDeCalibImg;
+	//-------------------------------
+
 	int EnCursoCalib = 0;
 	float TempoIntCalib = 0;
 	
-	public Texture2D ImaReady;
+	//public Texture2D ImaReady;
+	//-------------------------------
+	public Sprite imaReady;
 	
 	public ContrCalibracion ContrCalib;
 
-	// Use this for initialization
-	void Start () 
-	{
-	
-	}
-	
+	public SpriteRenderer mainImage;
+
 	// Update is called once per frame
 	void Update () 
 	{
@@ -33,13 +38,14 @@ public class PantallaCalibTuto : MonoBehaviour
 			if(TempoIntCalib >= Intervalo)
 			{
 				TempoIntCalib = 0;
-				if(EnCursoCalib + 1 < ImagenesDeCalib.Length)
+				if(EnCursoCalib + 1 < imagenesDeCalibImg.Length)
 					EnCursoCalib++;
 				else
 					EnCursoCalib = 0;
 			}
-			GetComponent<Renderer>().material.mainTexture = ImagenesDeCalib[EnCursoCalib];
-			
+			//GetComponent<Renderer>().material.mainTexture = ImagenesDeCalib[EnCursoCalib];
+			mainImage.sprite = imagenesDeCalibImg[EnCursoCalib];
+
 			break;
 			
 		case ContrCalibracion.Estados.Tutorial:
@@ -48,19 +54,21 @@ public class PantallaCalibTuto : MonoBehaviour
 			if(TempoIntTuto >= Intervalo)
 			{
 				TempoIntTuto = 0;
-				if(EnCursoTuto + 1 < ImagenesDelTuto.Length)
+				if(EnCursoTuto + 1 < imagenesDelTutoImg.Length)
 					EnCursoTuto++;
 				else
 					EnCursoTuto = 0;
 			}
-			GetComponent<Renderer>().material.mainTexture = ImagenesDelTuto[EnCursoTuto];
-			
+			//GetComponent<Renderer>().material.mainTexture = ImagenesDelTuto[EnCursoTuto];
+			mainImage.sprite = imagenesDelTutoImg[EnCursoTuto];
+
 			break;
 			
 		case ContrCalibracion.Estados.Finalizado:
 			//esperando al otro jugador		
-			GetComponent<Renderer>().material.mainTexture = ImaReady;
-			
+			//GetComponent<Renderer>().material.mainTexture = ImaReady;
+			mainImage.sprite = imaReady;
+
 			break;
 		}
 			
