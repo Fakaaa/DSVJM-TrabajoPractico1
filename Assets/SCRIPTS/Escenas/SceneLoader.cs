@@ -33,4 +33,13 @@ public class SceneLoader : MonoBehaviour
         if(AuxSene != null)
             SceneManager.LoadScene(indexScene);
     }
+
+    public void QuitGame()
+    {
+    #if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+    #else
+         Application.Quit();
+    #endif
+    }
 }
