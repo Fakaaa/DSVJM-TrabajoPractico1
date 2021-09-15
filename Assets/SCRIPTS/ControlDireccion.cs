@@ -3,7 +3,7 @@ using System.Collections;
 
 public class ControlDireccion : MonoBehaviour 
 {
-	public enum TipoInput {Mouse, Kinect, AWSD, Arrows}
+	public enum TipoInput {Mouse, Touch ,AWSD, Arrows}
 	public TipoInput InputAct = ControlDireccion.TipoInput.Mouse;
 
 	public Transform ManoDer;
@@ -38,55 +38,9 @@ public class ControlDireccion : MonoBehaviour
 				gameObject.SendMessage("SetGiro", MousePos.Relation(MousePos.AxisRelation.Horizontal));//debe ser reemplanado
 			break;
 			
-		case TipoInput.Kinect:
+		case TipoInput.Touch:
 			
-			//print("Angulo: "+Angulo());
-			/*
-			if(ManoIzq.position.y > ManoDer.position.y)
-			{
-				DirAct = Sentido.Der;
-				Diferencia = ManoIzq.position.y - ManoDer.position.y;
-			}
-			else
-			{
-				DirAct = Sentido.Izq;
-				Diferencia = ManoDer.position.y - ManoIzq.position.y;
-			}
-			*/
 			
-			if(ManoIzq.position.y > ManoDer.position.y)
-			{
-				DirAct = Sentido.Der;
-			}
-			else
-			{
-				DirAct = Sentido.Izq;
-			}
-			
-			switch(DirAct)
-			{
-			case Sentido.Der:
-				if(Angulo() <= MaxAng)
-					Giro = Angulo() / (MaxAng + DesSencibilidad);
-				else
-					Giro = 1;
-				
-				if(Habilitado)
-					gameObject.SendMessage("SetGiro", Giro);//debe ser reemplanado
-				
-				break;
-				
-			case Sentido.Izq:
-				if(Angulo() <= MaxAng)
-					Giro = (Angulo() / (MaxAng + DesSencibilidad)) * (-1);
-				else
-					Giro = (-1);
-				
-				if(Habilitado)
-					gameObject.SendMessage("SetGiro", Giro);//debe ser reemplanado
-				
-				break;
-			}
 			break;
             case TipoInput.AWSD:
                 if (Habilitado) {

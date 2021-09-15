@@ -1,13 +1,9 @@
 using UnityEngine;
-using System.Collections;
 
 public class Frenado : MonoBehaviour 
 {
 	public float VelEntrada = 0;
 	public string TagDeposito = "Deposito";
-	
-	ControlDireccion KInput;
-	
 	
 	float DagMax = 15f;
 	float DagIni = 1f;
@@ -28,12 +24,6 @@ public class Frenado : MonoBehaviour
 	{
 		//RestaurarVel();
 		Frenar();
-	}
-	
-	// Update is called once per frame
-	void Update () 
-	{
-	
 	}
 	
 	void FixedUpdate ()
