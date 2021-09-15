@@ -81,7 +81,7 @@ public class Frenado : MonoBehaviour
 	{
 		//Debug.Log(gameObject.name + "restaura la velociad");
 		GetComponent<ControlDireccion>().enabled = true;
-		gameObject.SendMessage("SetAcel", 1f);
+		//gameObject.SendMessage("SetAcel", 1f);
 		Frenando = false;
 		Tempo = 0;
 		Contador = 0;
