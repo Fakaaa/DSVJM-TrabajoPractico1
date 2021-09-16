@@ -246,7 +246,15 @@ public class GameManager : MonoBehaviour
                 TiempEspMuestraPts -= Time.deltaTime;
                 if (TiempEspMuestraPts <= 0)
                 {
-                    SceneLoader.Get()?.LoadScene("Credits");
+                    switch (ModoActual)
+                    {
+                        case ModoDeJuego.SinglePlayer:
+                            SceneLoader.Get()?.LoadScene("PtsFinal Singleplayer");
+                            break;
+                        case ModoDeJuego.LocalMultiplayer:
+                            SceneLoader.Get()?.LoadScene("PtsFinal");
+                            break;
+                    }
                     //Application.LoadLevel(Application.loadedLevel + 1);
                 }
 

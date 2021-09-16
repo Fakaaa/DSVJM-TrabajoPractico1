@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.60152423, g: 0.6018458, b: 0.60135347, a: 1}
+  m_IndirectSpecularColor: {r: 0.6019971, g: 0.6028948, b: 0.6022063, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!196 &3
 NavMeshSettings:
@@ -104413,7 +104413,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 629314373}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 407744760}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7272f53a2d4f7174a8c5cb502d24bb0d, type: 3}
@@ -118965,7 +118965,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 27660009}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1633663870}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7272f53a2d4f7174a8c5cb502d24bb0d, type: 3}
@@ -119210,6 +119210,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 392627552}
   m_CullTransparentMesh: 0
+--- !u!1 &407744760 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1753749050268706, guid: b81b1a58a0f14c9439cbdd014e695f71,
+    type: 3}
+  m_PrefabInstance: {fileID: 629314373}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &497274605
 GameObject:
   m_ObjectHideFlags: 0
@@ -119402,6 +119408,75 @@ PrefabInstance:
       objectReference: {fileID: 6356}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b81b1a58a0f14c9439cbdd014e695f71, type: 3}
+--- !u!1001 &807118313
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7691952804780037342, guid: 715b25e069ae46941ac9de33404dafcd,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 7691952804780037342, guid: 715b25e069ae46941ac9de33404dafcd,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7691952804780037342, guid: 715b25e069ae46941ac9de33404dafcd,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7691952804780037342, guid: 715b25e069ae46941ac9de33404dafcd,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 7691952804780037342, guid: 715b25e069ae46941ac9de33404dafcd,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7691952804780037342, guid: 715b25e069ae46941ac9de33404dafcd,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7691952804780037342, guid: 715b25e069ae46941ac9de33404dafcd,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7691952804780037342, guid: 715b25e069ae46941ac9de33404dafcd,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7691952804780037342, guid: 715b25e069ae46941ac9de33404dafcd,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7691952804780037342, guid: 715b25e069ae46941ac9de33404dafcd,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7691952804780037342, guid: 715b25e069ae46941ac9de33404dafcd,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7691952804780037343, guid: 715b25e069ae46941ac9de33404dafcd,
+        type: 3}
+      propertyPath: m_Name
+      value: SceneLoader
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 715b25e069ae46941ac9de33404dafcd, type: 3}
 --- !u!1 &829506576
 GameObject:
   m_ObjectHideFlags: 0
@@ -119735,6 +119810,7 @@ GameObject:
   - component: {fileID: 1560860182}
   - component: {fileID: 1560860184}
   - component: {fileID: 1560860183}
+  - component: {fileID: 1560860186}
   m_Layer: 5
   m_Name: CamionWheel
   m_TagString: Untagged
@@ -119798,6 +119874,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1560860181}
   m_CullTransparentMesh: 0
+--- !u!114 &1560860186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1560860181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a076b9c4adea8ce4887b3f17d138f020, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UI_Element: {fileID: 1560860183}
+  camionPlayer: {fileID: 407744760}
+  maximumSteeringAngle: 200
+  wheelReleasedSpeed: 180
 --- !u!1 &1568178463
 GameObject:
   m_ObjectHideFlags: 0
@@ -119845,6 +119937,12 @@ MonoBehaviour:
   miInput: 1
   Desde: {fileID: 13017}
   Hasta: {fileID: 13016}
+--- !u!1 &1633663870 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1753749050268706, guid: b81b1a58a0f14c9439cbdd014e695f71,
+    type: 3}
+  m_PrefabInstance: {fileID: 27660009}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1676753698
 GameObject:
   m_ObjectHideFlags: 0
@@ -120110,6 +120208,7 @@ GameObject:
   - component: {fileID: 2063875392}
   - component: {fileID: 2063875394}
   - component: {fileID: 2063875393}
+  - component: {fileID: 2063875395}
   m_Layer: 5
   m_Name: CamionWheel
   m_TagString: Untagged
@@ -120173,6 +120272,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2063875391}
   m_CullTransparentMesh: 0
+--- !u!114 &2063875395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2063875391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a076b9c4adea8ce4887b3f17d138f020, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UI_Element: {fileID: 2063875393}
+  camionPlayer: {fileID: 1633663870}
+  maximumSteeringAngle: 200
+  wheelReleasedSpeed: 200
 --- !u!1 &2114976347
 GameObject:
   m_ObjectHideFlags: 0

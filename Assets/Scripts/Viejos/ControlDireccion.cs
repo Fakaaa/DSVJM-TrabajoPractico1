@@ -39,7 +39,14 @@ public class ControlDireccion : MonoBehaviour
 			break;
 			
 		case TipoInput.Touch:
-			
+
+                foreach (Touch touch in Input.touches)
+                {
+					if(touch.phase == TouchPhase.Moved)
+                    {
+						
+                    }
+                }
 			
 			break;
             case TipoInput.AWSD:
