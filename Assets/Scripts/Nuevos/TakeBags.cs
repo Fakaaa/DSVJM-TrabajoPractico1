@@ -4,7 +4,6 @@ using UnityEngine.UI;
 public class TakeBags : MonoBehaviour
 {
     Image uiInventory;
-    [SerializeField] int counterBags;
     [SerializeField] Sprite [] stockImages;
     [SerializeField] Sprite maxStock;
     [SerializeField] Player camionPlayer;
@@ -20,23 +19,21 @@ public class TakeBags : MonoBehaviour
         timer = 0;
 
         uiInventory = gameObject.GetComponent<Image>();
-
-        camionPlayer.agregarBolsa += AddBagOfMoney;
     }
 
     void Update()
     {
-        if(counterBags < stockImages.Length-1)
+        if(camionPlayer.CantBolsAct < stockImages.Length-1)
         {
-            uiInventory.sprite = stockImages[counterBags];
+            uiInventory.sprite = stockImages[camionPlayer.CantBolsAct];
         }
-        else if(counterBags == stockImages.Length - 1)
+        else if(camionPlayer.CantBolsAct == stockImages.Length - 1)
         {
             timer += Time.deltaTime;
 
             if(timer < timerLastStock && timer < timerMaxStock)
             {
-                uiInventory.sprite = stockImages[counterBags];
+                uiInventory.sprite = stockImages[camionPlayer.CantBolsAct];
             }
             if(timer > timerLastStock && timer < timerMaxStock)
             {
@@ -46,15 +43,5 @@ public class TakeBags : MonoBehaviour
             if (timer > timerLastStock && timer > timerMaxStock)
                 timer = 0;
         }
-    }
-
-    public void AddBagOfMoney()
-    {
-        counterBags += 1;
-    }
-
-    public void DepositBagOfMoney()
-    {
-        counterBags -= 1;
     }
 }

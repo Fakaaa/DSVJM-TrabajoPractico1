@@ -7,7 +7,7 @@ public class Player : MonoBehaviour
 	public int IdPlayer = 0;
 	
 	public Bolsa[] Bolasas;
-	int CantBolsAct = 0;
+	[HideInInspector] public int CantBolsAct = 0;
 	public string TagBolsas = "";
 	
 	public enum Estados{EnDescarga, EnConduccion, EnCalibracion, EnTutorial}
@@ -23,9 +23,7 @@ public class Player : MonoBehaviour
 	Visualizacion MiVisualizacion;
 
 	public delegate void AumentarCantBolsas();
-	public delegate void DepositarBolsa();
 	public AumentarCantBolsas agregarBolsa;
-	public DepositarBolsa depositarBolsa;
 	
 	//------------------------------------------------------------------//
 

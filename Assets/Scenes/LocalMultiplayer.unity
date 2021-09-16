@@ -25765,7 +25765,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &3127
 GameObject:
   m_ObjectHideFlags: 0
@@ -119222,6 +119222,7 @@ GameObject:
   - component: {fileID: 497274608}
   - component: {fileID: 497274607}
   - component: {fileID: 497274606}
+  - component: {fileID: 497274610}
   m_Layer: 5
   m_Name: CanvasCamion1
   m_TagString: Untagged
@@ -119310,6 +119311,22 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &497274610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 497274605}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91ff3f1868a81964eb425fe9804a6207, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cameraConduccion: {fileID: 6358}
+  cameraDescarga: {fileID: 6359}
+  camionPlayer: {fileID: 13058}
+  volanteCamion: {fileID: 1560860181}
 --- !u!1001 &629314373
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -119596,6 +119613,7 @@ GameObject:
   - component: {fileID: 1417966200}
   - component: {fileID: 1417966199}
   - component: {fileID: 1417966198}
+  - component: {fileID: 1417966202}
   m_Layer: 5
   m_Name: CanvasCamion2
   m_TagString: Untagged
@@ -119684,6 +119702,22 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1417966202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1417966197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91ff3f1868a81964eb425fe9804a6207, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cameraConduccion: {fileID: 6360}
+  cameraDescarga: {fileID: 6355}
+  camionPlayer: {fileID: 27660010}
+  volanteCamion: {fileID: 2063875391}
 --- !u!1 &1425887806 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100012, guid: 42ccde1c0abcc4944b4fc7242368f31a,
@@ -119702,7 +119736,7 @@ GameObject:
   - component: {fileID: 1560860184}
   - component: {fileID: 1560860183}
   m_Layer: 5
-  m_Name: CamionBrick
+  m_Name: CamionWheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -119861,7 +119895,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2e9131fa4636ba42a75e6ca570b138c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  counterBags: 0
   stockImages:
   - {fileID: 21300000, guid: 1784fc4fc4214be4d8c3c409ec1e286b, type: 3}
   - {fileID: 21300000, guid: 2a647cac9d6b69146b713ab645e30568, type: 3}
@@ -119993,7 +120026,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2e9131fa4636ba42a75e6ca570b138c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  counterBags: 0
   stockImages:
   - {fileID: 21300000, guid: 726025f4b4bbccb4197f04d813acfd22, type: 3}
   - {fileID: 21300000, guid: 0d3d821cad2bcee46a297108f934729a, type: 3}
@@ -120079,7 +120111,7 @@ GameObject:
   - component: {fileID: 2063875394}
   - component: {fileID: 2063875393}
   m_Layer: 5
-  m_Name: CamionBrick
+  m_Name: CamionWheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

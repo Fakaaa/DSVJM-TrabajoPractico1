@@ -245,7 +245,10 @@ public class GameManager : MonoBehaviour
 
                 TiempEspMuestraPts -= Time.deltaTime;
                 if (TiempEspMuestraPts <= 0)
-                    Application.LoadLevel(Application.loadedLevel + 1);
+                {
+                    SceneLoader.Get()?.LoadScene("Credits");
+                    //Application.LoadLevel(Application.loadedLevel + 1);
+                }
 
                 break;
         }
