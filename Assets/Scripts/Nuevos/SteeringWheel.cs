@@ -115,8 +115,6 @@ public class SteeringWheel : MonoBehaviour
         wheelPrevAngle = wheelNewAngle;
 
         camionPlayer.SendMessage("SetGiro", Mathf.Clamp(wheelAngle, -1, 1));
-
-        Debug.Log("ANGULO GIRO: " + wheelAngle);
     }
 
     public void ReleaseEvent(BaseEventData eventData)

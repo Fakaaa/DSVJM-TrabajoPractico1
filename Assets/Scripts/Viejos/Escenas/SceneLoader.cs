@@ -5,6 +5,14 @@ public class SceneLoader : MonoBehaviour
 {
     private static SceneLoader Instance;
 
+    [System.Serializable]
+    public enum GameDifficulty { Easy, Medium, Hard}
+    public GameDifficulty gameDifficulty;
+
+    [System.Serializable]
+    public enum GameMode { Single, Multi}
+    public GameMode gMode;
+
     public static SceneLoader Get()
     {
         return Instance;
@@ -32,6 +40,26 @@ public class SceneLoader : MonoBehaviour
         Scene AuxSene = SceneManager.GetSceneByBuildIndex(indexScene);
         if(AuxSene != null)
             SceneManager.LoadScene(indexScene);
+    }
+
+    public void SetGameMode(GameMode gameMode)
+    {
+        gMode = gameMode;
+    }
+
+    public void SetGameDifficulty(GameDifficulty difficulty)
+    {
+        gameDifficulty = difficulty;
+    }
+
+    public GameMode GetActualMode()
+    {
+        return gMode;
+    }
+
+    public GameDifficulty GetActualDifficulty()
+    {
+        return gameDifficulty;
     }
 
     public void QuitGame()
