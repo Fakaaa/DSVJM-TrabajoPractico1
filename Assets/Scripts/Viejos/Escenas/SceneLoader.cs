@@ -6,18 +6,21 @@ public class SceneLoader : MonoBehaviour
     private static SceneLoader Instance;
 
     [System.Serializable]
-    public enum GameDifficulty { Easy, Medium, Hard}
+    public enum GameDifficulty { Easy, Normal, Hard}
     public GameDifficulty gameDifficulty;
 
     [System.Serializable]
     public enum GameMode { Single, Multi}
     public GameMode gMode;
 
+    public string singlePlayerSceneName;
+    public string multiPlayerSceneName;
+
     public static SceneLoader Get()
     {
         return Instance;
     }
-
+    
     void Awake()
     {
         if(Instance != null)
@@ -35,6 +38,18 @@ public class SceneLoader : MonoBehaviour
         if(AuxSene != null)
             SceneManager.LoadScene(sceneName);
     }
+
+    public void LoadLevel()
+    {
+        switch (gMode)
+        {
+            case GameMode.Single:   LoadScene(singlePlayerSceneName);
+                break;
+            case GameMode.Multi:    LoadScene(multiPlayerSceneName);
+                break;
+        }
+    }
+
     public void LoadScene(int indexScene)
     {
         Scene AuxSene = SceneManager.GetSceneByBuildIndex(indexScene);
@@ -42,14 +57,29 @@ public class SceneLoader : MonoBehaviour
             SceneManager.LoadScene(indexScene);
     }
 
-    public void SetGameMode(GameMode gameMode)
+    public void SetGameModeSinglePlayer()
     {
-        gMode = gameMode;
+        gMode = GameMode.Single;
     }
 
-    public void SetGameDifficulty(GameDifficulty difficulty)
+    public void SetGameModeMultiPlayer()
     {
-        gameDifficulty = difficulty;
+        gMode = GameMode.Multi;
+    }
+
+    public void SetDifficultyEasy()
+    {
+        gameDifficulty = GameDifficulty.Easy;
+    }
+
+    public void SetDifficultyNormal()
+    {
+        gameDifficulty = GameDifficulty.Normal;
+    }
+
+    public void SetDifficultyHard()
+    {
+        gameDifficulty = GameDifficulty.Hard;
     }
 
     public GameMode GetActualMode()

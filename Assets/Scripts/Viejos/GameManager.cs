@@ -255,7 +255,6 @@ public class GameManager : MonoBehaviour
                             SceneLoader.Get()?.LoadScene("PtsFinal");
                             break;
                     }
-                    //Application.LoadLevel(Application.loadedLevel + 1);
                 }
 
                 break;
