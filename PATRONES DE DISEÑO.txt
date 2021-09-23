@@ -1,0 +1,8 @@
+
+Se han utilizado:
+
+FACTORY PATTERN: 
+Lo utilice en la clase Input manager para tener mayor facilidad en la creación de diferentes inputs para el camion, siendo asi el touch o las teclas del keyboard. Tambien logrando ahorrar muchisimo codigo inncesario y haciendo las cosas
+mas legibles.
+
+OBJECT POOL:
