@@ -14,6 +14,7 @@ public class CameraCanvas : MonoBehaviour
     [SerializeField] GameObject startButton1;
     [SerializeField] GameObject startButton2;
 
+    [SerializeField] InputButtonsCanvas inputHandeler;
     [SerializeField] GameObject buttonsConduc;
     [SerializeField] GameObject buttonsCalib;
 
@@ -74,8 +75,10 @@ public class CameraCanvas : MonoBehaviour
                     startButton1.SetActive(false);
                     break;
                 case GameManager.ModoDeJuego.LocalMultiplayer:
-                    //startButton1.SetActive(false);
-                    //startButton2.SetActive(false);
+                    if (startButton1 != null)
+                        startButton1.SetActive(false);
+                    if (startButton2 != null)
+                        startButton2.SetActive(false);
                     break;
             }
         }
@@ -91,8 +94,10 @@ public class CameraCanvas : MonoBehaviour
                     startButton1.SetActive(true);
                     break;
                 case GameManager.ModoDeJuego.LocalMultiplayer:
-                    //startButton1.SetActive(true);
-                    //startButton2.SetActive(true);
+                    if(startButton1 != null)
+                        startButton1.SetActive(true);
+                    if(startButton2 != null)
+                        startButton2.SetActive(true);
                     break;
             }
         }
@@ -100,6 +105,9 @@ public class CameraCanvas : MonoBehaviour
 
     void EnableButtonsCali()
     {
+        if (!inputHandeler.activateInputsTuto)
+            return;
+
         buttonsCalib.SetActive(true);
     }
     void EnableButtonsCondu()
@@ -108,6 +116,9 @@ public class CameraCanvas : MonoBehaviour
     }
     void DisableButtonsCali()
     {
+        if (!inputHandeler.activateInputsTuto)
+            return;
+
         buttonsCalib.SetActive(false);
     }
     void DisableButtonsCondu()

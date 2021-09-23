@@ -6,6 +6,8 @@ public class InputButtonsCanvas : MonoBehaviour
     public PalletMover palletMoverCalibration;
     GameManager refGm;
 
+    public bool activateInputsTuto = false;
+
     private void Start()
     {
         refGm = FindObjectOfType<GameManager>();
@@ -15,14 +17,17 @@ public class InputButtonsCanvas : MonoBehaviour
     public void StartSinglePlayer()
     {
         refGm?.SetSinglePlayer();
+        activateInputsTuto = true;
     }
     public void StartPlayer1Multi()
     {
         refGm?.SetPlayer1Multi();
+        activateInputsTuto = true;
     }
     public void StartPlayer2Multi()
     {
         refGm?.SetPlayer2Multi();
+        activateInputsTuto = true;
     }
     //-------------------------------------------------------------
     //=============================================================
@@ -35,8 +40,7 @@ public class InputButtonsCanvas : MonoBehaviour
 
     public void FirstStepCalibration()
     {
-        //if(!palletMoverCalibration.Tenencia() && palletMoverCalibration.Desde.Tenencia())
-            palletMoverCalibration.PrimerPaso();
+        palletMoverCalibration.PrimerPaso();
     }
     //-------------------------------------------------------------
     public void SecondStepDeploy()
@@ -47,8 +51,7 @@ public class InputButtonsCanvas : MonoBehaviour
 
     public void SecondStepCalibration()
     {
-        //if (palletMoverCalibration.Tenencia())
-            palletMoverCalibration.SegundoPaso();
+        palletMoverCalibration.SegundoPaso();
     }
 
     //-------------------------------------------------------------
@@ -60,8 +63,7 @@ public class InputButtonsCanvas : MonoBehaviour
 
     public void ThirdStepCalibration()
     {
-        //if(palletMoverCalibration.segundoCompleto && palletMoverCalibration.Tenencia())
-            palletMoverCalibration.TercerPaso();
+        palletMoverCalibration.TercerPaso();
     }
     //-------------------------------------------------------------
 }
