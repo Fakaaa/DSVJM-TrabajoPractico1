@@ -14,6 +14,9 @@ public class CameraCanvas : MonoBehaviour
     [SerializeField] GameObject startButton1;
     [SerializeField] GameObject startButton2;
 
+    [SerializeField] GameObject buttonsConduc;
+    [SerializeField] GameObject buttonsCalib;
+
     void Start()
     {
         canvasCamera = GetComponent<Canvas>();
@@ -29,6 +32,8 @@ public class CameraCanvas : MonoBehaviour
                 inventoryCamion.SetActive(true);
                 canvasCamera.worldCamera = cameraDescarga;
 
+                DisableButtonsCali();
+                EnableButtonsCondu();
                 DisableStartButtons();
 
                 break;
@@ -38,6 +43,8 @@ public class CameraCanvas : MonoBehaviour
                 inventoryCamion.SetActive(true);
                 canvasCamera.worldCamera = cameraConduccion;
 
+                DisableButtonsCali();
+                EnableButtonsCondu();
                 DisableStartButtons();
 
                 break;
@@ -47,6 +54,8 @@ public class CameraCanvas : MonoBehaviour
                 inventoryCamion.SetActive(false);
                 canvasCamera.worldCamera = cameraCalibracion;
 
+                DisableButtonsCondu();
+                EnableButtonsCali();
                 EnableStartButtons();
 
                 break;
@@ -87,5 +96,22 @@ public class CameraCanvas : MonoBehaviour
                     break;
             }
         }
+    }
+
+    void EnableButtonsCali()
+    {
+        buttonsCalib.SetActive(true);
+    }
+    void EnableButtonsCondu()
+    {
+        buttonsConduc.SetActive(true);
+    }
+    void DisableButtonsCali()
+    {
+        buttonsCalib.SetActive(false);
+    }
+    void DisableButtonsCondu()
+    {
+        buttonsConduc.SetActive(false);
     }
 }

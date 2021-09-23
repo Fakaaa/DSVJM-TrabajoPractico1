@@ -17,4 +17,16 @@ public class CamionesInputManager : InputManager
 
         return input;
     }
+
+    public string Player1;
+    public string Player2;
+
+    public InputCamion player1;
+    public InputCamion player2;
+
+    private void Start()
+    {
+        player1 = GetInput(Player1);
+        player2 = GetInput(Player2);
+    }
 }

@@ -7,7 +7,7 @@ public class PalletMover : ManejoPallets {
     public string PlayerInput;
 
     public ManejoPallets Desde, Hasta;
-    bool segundoCompleto = false;
+    public bool segundoCompleto = false;
 
     private void Update() 
     {

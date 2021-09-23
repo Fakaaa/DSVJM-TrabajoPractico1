@@ -124,12 +124,18 @@ public class GameManager : MonoBehaviour
                             }
                         }
 
-                        if (PlayerInfo1.PJ == null && (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)))
+                        //Nuevo
+                        if (PlayerInfo1.PJ == null && InputManager.Instance.GetInput("1").GetButton(InputCamion.Buttons.Start))
                         {
-                            PlayerInfo1 = new PlayerInfo(0, Player1);
-                            PlayerInfo1.LadoAct = Visualizacion.Lado.Centro;
-                            SetPosicion(PlayerInfo1);
+                            SetSinglePlayer();
                         }
+                        //Antiguo
+                        //if (PlayerInfo1.PJ == null && (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)))
+                        //{
+                        //    PlayerInfo1 = new PlayerInfo(0, Player1);
+                        //    PlayerInfo1.LadoAct = Visualizacion.Lado.Centro;
+                        //    SetPosicion(PlayerInfo1);
+                        //}
 
                         if (PlayerInfo1.PJ != null)
                         {
@@ -158,16 +164,12 @@ public class GameManager : MonoBehaviour
 
                         if (PlayerInfo1.PJ == null && Input.GetKeyDown(KeyCode.W))
                         {
-                            PlayerInfo1 = new PlayerInfo(0, Player1);
-                            PlayerInfo1.LadoAct = Visualizacion.Lado.Izq;
-                            SetPosicion(PlayerInfo1);
+                            SetPlayer1Multi();
                         }
 
                         if (PlayerInfo2.PJ == null && Input.GetKeyDown(KeyCode.UpArrow))
                         {
-                            PlayerInfo2 = new PlayerInfo(1, Player2);
-                            PlayerInfo2.LadoAct = Visualizacion.Lado.Der;
-                            SetPosicion(PlayerInfo2);
+                            SetPlayer2Multi();
                         }
 
                         //cuando los 2 pj terminaron los tutoriales empiesa la carrera
@@ -197,18 +199,8 @@ public class GameManager : MonoBehaviour
                     FinalizarCarrera();
                 }
 
-                /*
-                //para testing
-                TiempoTranscurrido += T.GetDT();
-                DistanciaRecorrida += (Player1.transform.position - PosCamionesCarrera[0]).magnitude;
-                */
-
                 if (ConteoRedresivo)
                 {
-                    //se asegura de que los vehiculos se queden inmobiles
-                    //Player1.rigidbody.velocity = Vector3.zero;
-                    //Player2.rigidbody.velocity = Vector3.zero;
-
                     ConteoParaInicion -= T.GetDT();
                     if (ConteoParaInicion < 0)
                     {
@@ -224,24 +216,12 @@ public class GameManager : MonoBehaviour
                     {
                         //termina el juego
                     }
-                    /*
-                    //otro tamaño
-                    if(!SeteadoNuevaFontSize && TiempoDeJuego <= 5)
-                    {
-                        SeteadoNuevaFontSize = true;
-                        GS_TiempoGUI.box.fontSize = TamNuevoFont;
-                        GS_TiempoGUI.box.normal.textColor = Color.red;
-                    }
-                    */
                 }
 
                 break;
 
 
             case EstadoJuego.Finalizado:
-
-                //nada de trakeo con kinect, solo se muestra el puntaje
-                //tambien se puede hacer alguna animacion, es el tiempo previo a la muestra de pts
 
                 TiempEspMuestraPts -= Time.deltaTime;
                 if (TiempEspMuestraPts <= 0)
@@ -259,6 +239,27 @@ public class GameManager : MonoBehaviour
 
                 break;
         }
+    }
+
+    public void SetSinglePlayer()
+    {
+        PlayerInfo1 = new PlayerInfo(0, Player1);
+        PlayerInfo1.LadoAct = Visualizacion.Lado.Centro;
+        SetPosicion(PlayerInfo1);
+    }
+
+    public void SetPlayer1Multi()
+    {
+        PlayerInfo1 = new PlayerInfo(0, Player1);
+        PlayerInfo1.LadoAct = Visualizacion.Lado.Izq;
+        SetPosicion(PlayerInfo1);
+    }
+
+    public void SetPlayer2Multi()
+    {
+        PlayerInfo2 = new PlayerInfo(1, Player2);
+        PlayerInfo2.LadoAct = Visualizacion.Lado.Der;
+        SetPosicion(PlayerInfo2);
     }
 
     void OnGUI()

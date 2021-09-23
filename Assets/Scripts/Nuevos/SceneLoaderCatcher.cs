@@ -11,43 +11,41 @@ public class SceneLoaderCatcher : MonoBehaviour
 
     public void SetSinglePlayer()
     {
-        if(slReference != null)
-            slReference.SetGameModeSinglePlayer();
+        slReference?.SetGameModeSinglePlayer();
     }
 
     public void SetMultiPlayer()
     {
-        if(slReference != null)
-            slReference.SetGameModeMultiPlayer();
+        slReference?.SetGameModeMultiPlayer();
     }
 
     public void SetEasy()
     {
-        if(slReference != null)
-            slReference.SetDifficultyEasy();
+        slReference?.SetDifficultyEasy();
     }
 
     public void SetNormal()
     {
-        if(slReference != null)
-            slReference.SetDifficultyNormal();
+        slReference?.SetDifficultyNormal();
     }
 
     public void SetHard()
     {
-        if(slReference != null)
-            slReference.SetDifficultyHard();
+        slReference?.SetDifficultyHard();
     }
 
     public void LoadLevel()
     {
-        if (slReference != null)
-            slReference.LoadLevel();
+        slReference?.LoadLevel();
     }
 
     public void LoadScene(string sceneName)
     {
-        if (slReference != null)
-            slReference.LoadScene(sceneName);
+        slReference?.LoadScene(sceneName);
+    }
+
+    public void QuitGame()
+    {
+        slReference?.QuitGame();
     }
 }
