@@ -7,7 +7,8 @@ public class SteeringWheel : MonoBehaviour
 {
     public Graphic UI_Element;
 
-    public GameObject camionPlayer; 
+    public GameObject camionPlayer;
+    public string playerInput;
 
     RectTransform rectT;
     Vector2 centerPoint;
@@ -114,7 +115,9 @@ public class SteeringWheel : MonoBehaviour
         wheelAngle = Mathf.Clamp(wheelAngle, -maximumSteeringAngle, maximumSteeringAngle);
         wheelPrevAngle = wheelNewAngle;
 
-        camionPlayer.SendMessage("SetGiro", Mathf.Clamp(wheelAngle, -1, 1));
+
+        InputManager.Instance.GetInput(playerInput).SetHorizontal(GetClampedValue());
+        camionPlayer.SendMessage("SetGiro", InputManager.Instance.GetInput(playerInput).GetHorizontal());
     }
 
     public void ReleaseEvent(BaseEventData eventData)

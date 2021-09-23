@@ -18315,7 +18315,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &2684
 GameObject:
   m_ObjectHideFlags: 0
@@ -25608,7 +25608,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &3118
 GameObject:
   m_ObjectHideFlags: 0
@@ -49217,7 +49217,7 @@ Camera:
   m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.5
+    x: 0
     y: 0
     width: 0.5
     height: 1
@@ -49260,7 +49260,7 @@ Camera:
   m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0
+    x: 0.5
     y: 0
     width: 0.5
     height: 1
@@ -118932,6 +118932,11 @@ PrefabInstance:
       propertyPath: InputAct
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 114475702172432364, guid: b81b1a58a0f14c9439cbdd014e695f71,
+        type: 3}
+      propertyPath: PlayerNumber
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 114643806136207610, guid: b81b1a58a0f14c9439cbdd014e695f71,
         type: 3}
       propertyPath: IdPlayer
@@ -119070,6 +119075,55 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!1 &244741285
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 244741286}
+  - component: {fileID: 244741287}
+  m_Layer: 5
+  m_Name: InputTouchButtons Camion 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &244741286
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 244741285}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -290.6036}
+  m_LocalScale: {x: 0.99766123, y: 0.9976612, z: 0.9976612}
+  m_Children: []
+  m_Father: {fileID: 1417966201}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 23484.844, y: -90.75713}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &244741287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 244741285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd282c148fd107f48972c9f16026ee30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  palletMover: {fileID: 1568178465}
 --- !u!1 &283618033
 GameObject:
   m_ObjectHideFlags: 0
@@ -119102,7 +119156,7 @@ RectTransform:
   m_Children:
   - {fileID: 1444890528}
   m_Father: {fileID: 497274609}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
@@ -119151,7 +119205,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 283618036}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1334948829}
+        m_MethodName: ActiveSecondStepPalletDeploy
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &283618036
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -119221,7 +119286,7 @@ RectTransform:
   m_Children:
   - {fileID: 982300182}
   m_Father: {fileID: 1417966201}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -119307,7 +119372,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 306111953}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 244741287}
+        m_MethodName: ActiveFirstStepPalletDeploy
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &354886827
 GameObject:
   m_ObjectHideFlags: 0
@@ -119352,7 +119428,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Controlador: {fileID: 0}
-  miInput: 1
+  PlayerInput: 2
   Desde: {fileID: 13040}
   Hasta: {fileID: 13041}
 --- !u!1 &392627552
@@ -119547,6 +119623,7 @@ RectTransform:
   m_Children:
   - {fileID: 1560860182}
   - {fileID: 1966703006}
+  - {fileID: 1334948828}
   - {fileID: 2125215902}
   - {fileID: 283618034}
   - {fileID: 1878468046}
@@ -119570,10 +119647,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91ff3f1868a81964eb425fe9804a6207, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cameraCalibracion: {fileID: 6356}
   cameraConduccion: {fileID: 6358}
   cameraDescarga: {fileID: 6359}
   camionPlayer: {fileID: 13058}
   volanteCamion: {fileID: 1560860181}
+  inventoryCamion: {fileID: 1966703005}
+  startButton1: {fileID: 0}
+  startButton2: {fileID: 0}
 --- !u!1001 &629314373
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -119627,6 +119708,11 @@ PrefabInstance:
       propertyPath: ManoIzq
       value: 
       objectReference: {fileID: 4626}
+    - target: {fileID: 114475702172432364, guid: b81b1a58a0f14c9439cbdd014e695f71,
+        type: 3}
+      propertyPath: PlayerNumber
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 114911345111112572, guid: b81b1a58a0f14c9439cbdd014e695f71,
         type: 3}
       propertyPath: m_Enabled
@@ -119729,9 +119815,9 @@ RectTransform:
   m_Father: {fileID: 2114976348}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 135, y: 95}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -135, y: 95}
   m_SizeDelta: {x: 280, y: 135}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &829506578
@@ -119895,7 +119981,7 @@ RectTransform:
   m_Children:
   - {fileID: 2118633877}
   m_Father: {fileID: 1417966201}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -119981,7 +120067,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 995357089}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 244741287}
+        m_MethodName: ActiveSecondStepPalletDeploy
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1041039464
 GameObject:
   m_ObjectHideFlags: 0
@@ -120026,7 +120123,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Controlador: {fileID: 0}
-  miInput: 0
+  PlayerInput: 1
   Desde: {fileID: 13044}
   Hasta: {fileID: 13043}
 --- !u!1 &1049659492 stripped
@@ -120233,9 +120330,58 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Controlador: {fileID: 0}
-  miInput: 0
+  PlayerInput: 1
   Desde: {fileID: 13062}
   Hasta: {fileID: 13063}
+--- !u!1 &1334948827
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1334948828}
+  - component: {fileID: 1334948829}
+  m_Layer: 5
+  m_Name: InputTouchButtons Camion 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1334948828
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1334948827}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 497274609}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1334948829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1334948827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd282c148fd107f48972c9f16026ee30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  palletMover: {fileID: 1325283266}
 --- !u!1 &1409017059
 GameObject:
   m_ObjectHideFlags: 0
@@ -120403,6 +120549,7 @@ RectTransform:
   m_Children:
   - {fileID: 2063875392}
   - {fileID: 1676753699}
+  - {fileID: 244741286}
   - {fileID: 306111952}
   - {fileID: 995357088}
   - {fileID: 1482799492}
@@ -120426,10 +120573,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91ff3f1868a81964eb425fe9804a6207, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cameraCalibracion: {fileID: 6357}
   cameraConduccion: {fileID: 6360}
   cameraDescarga: {fileID: 6355}
   camionPlayer: {fileID: 27660010}
   volanteCamion: {fileID: 2063875391}
+  inventoryCamion: {fileID: 1676753698}
+  startButton1: {fileID: 0}
+  startButton2: {fileID: 0}
 --- !u!1 &1425887806 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100012, guid: 42ccde1c0abcc4944b4fc7242368f31a,
@@ -120542,7 +120693,7 @@ RectTransform:
   m_Children:
   - {fileID: 1409017060}
   m_Father: {fileID: 1417966201}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -120628,7 +120779,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1482799493}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 244741287}
+        m_MethodName: ActiveThirdStepPalletDeploy
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1560860181
 GameObject:
   m_ObjectHideFlags: 0
@@ -120718,6 +120880,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UI_Element: {fileID: 1560860183}
   camionPlayer: {fileID: 407744760}
+  playerInput: 2
   maximumSteeringAngle: 200
   wheelReleasedSpeed: 180
 --- !u!1 &1568178463
@@ -120764,7 +120927,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Controlador: {fileID: 0}
-  miInput: 1
+  PlayerInput: 2
   Desde: {fileID: 13017}
   Hasta: {fileID: 13016}
 --- !u!1 &1633663870 stripped
@@ -120867,6 +121030,49 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1676753698}
   m_CullTransparentMesh: 0
+--- !u!1 &1772979963
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1772979965}
+  - component: {fileID: 1772979964}
+  m_Layer: 0
+  m_Name: CamionInputMng
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1772979964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1772979963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43ca4d3ef389d6340ab6f2caf7450a3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1772979965
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1772979963}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 6.0475073, y: 7.498755, z: 5092.549}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 23
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1878468045
 GameObject:
   m_ObjectHideFlags: 0
@@ -120899,7 +121105,7 @@ RectTransform:
   m_Children:
   - {fileID: 1094474325}
   m_Father: {fileID: 497274609}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
@@ -120948,7 +121154,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1878468048}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1334948829}
+        m_MethodName: ActiveThirdStepPalletDeploy
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1878468048
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -121235,6 +121452,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UI_Element: {fileID: 2063875393}
   camionPlayer: {fileID: 1633663870}
+  playerInput: 1
   maximumSteeringAngle: 200
   wheelReleasedSpeed: 200
 --- !u!1 &2114976347
@@ -121442,7 +121660,7 @@ RectTransform:
   m_Children:
   - {fileID: 1059330458}
   m_Father: {fileID: 497274609}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
@@ -121491,7 +121709,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2125215904}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1334948829}
+        m_MethodName: ActiveFirstStepPalletDeploy
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2125215904
 MonoBehaviour:
   m_ObjectHideFlags: 0

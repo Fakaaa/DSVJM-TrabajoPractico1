@@ -65,8 +65,8 @@ public class CameraCanvas : MonoBehaviour
                     startButton1.SetActive(false);
                     break;
                 case GameManager.ModoDeJuego.LocalMultiplayer:
-                    startButton1.SetActive(false);
-                    startButton2.SetActive(false);
+                    //startButton1.SetActive(false);
+                    //startButton2.SetActive(false);
                     break;
             }
         }
@@ -82,8 +82,8 @@ public class CameraCanvas : MonoBehaviour
                     startButton1.SetActive(true);
                     break;
                 case GameManager.ModoDeJuego.LocalMultiplayer:
-                    startButton1.SetActive(true);
-                    startButton2.SetActive(true);
+                    //startButton1.SetActive(true);
+                    //startButton2.SetActive(true);
                     break;
             }
         }
