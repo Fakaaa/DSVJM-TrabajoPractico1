@@ -208,18 +208,17 @@ public class GameManager : MonoBehaviour
 
             case EstadoJuego.Finalizado:
 
-                TiempEspMuestraPts -= Time.deltaTime;
-                if (TiempEspMuestraPts <= 0)
+                switch (ModoActual)
                 {
-                    switch (ModoActual)
-                    {
-                        case ModoDeJuego.SinglePlayer:
-                            SceneLoader.Get()?.LoadScene("PtsFinal Singleplayer");
-                            break;
-                        case ModoDeJuego.LocalMultiplayer:
-                            SceneLoader.Get()?.LoadScene("PtsFinal");
-                            break;
-                    }
+                    case ModoDeJuego.SinglePlayer:
+                        SceneLoader.Get()?.GoFinalPointsSinglePlayer();
+                        TransferScores.Instance?.SaveScorePlayer1(Player1.Dinero);
+                        break;
+                    case ModoDeJuego.LocalMultiplayer:
+                        SceneLoader.Get()?.GoFinalPointsMultiLocal();
+                        TransferScores.Instance?.SaveScorePlayer1(Player1.Dinero);
+                        TransferScores.Instance?.SaveScorePlayer2(Player2.Dinero);
+                        break;
                 }
 
                 break;
@@ -351,22 +350,6 @@ public class GameManager : MonoBehaviour
                 break;
         }
     }
-
-    /*
-	public static ControladorDeDescarga GetContrDesc(int pjID)
-	{
-		switch (pjID)
-		{
-		case 1:
-			return ContrDesc1;
-			break;
-			
-		case 2:
-			return ContrDesc2;
-			break;
-		}
-		return null;
-	}*/
 
     //se encarga de posicionar la camara derecha para el jugador que esta a la derecha y viseversa
     void SetPosicion(PlayerInfo pjInf)
@@ -557,9 +540,6 @@ public class GameManager : MonoBehaviour
         }
     }
 
-
-
-
     [System.Serializable]
     public class PlayerInfo
     {
@@ -579,5 +559,4 @@ public class GameManager : MonoBehaviour
 
         public Player PJ;
     }
-
 }

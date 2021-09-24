@@ -49,8 +49,8 @@ public class AcelerAuto : MonoBehaviour
 		if(rigidbody.velocity.magnitude < VelMax)
 			rigidbody.velocity += transform.forward * AcelPorSeg * Time.deltaTime;
 			*/
-		
-		
+
+
 		/*
 		if(Velocidad < VelMax)
 		{
@@ -59,7 +59,9 @@ public class AcelerAuto : MonoBehaviour
 		
 		rigidbody.MovePosition(this.transform.position + this.transform.forward * Velocidad);
 		*/
-		
+
+		Debug.Log("ESTOY ACAAAAA");
+
 		if(Velocidad < VelMax)
 		{
 			Velocidad += AcelPorSeg * Time.fixedDeltaTime;

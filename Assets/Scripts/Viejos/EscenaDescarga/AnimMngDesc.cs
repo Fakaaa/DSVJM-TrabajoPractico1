@@ -34,7 +34,6 @@ public class AnimMngDesc : MonoBehaviour
 			{
 				AnimAct = AnimMngDesc.AnimEnCurso.Nada;
 				ContrDesc.FinAnimEntrada();
-				print("fin Anim Entrada");
 			}
 			
 			break;

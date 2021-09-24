@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class CameraCanvas : MonoBehaviour
 {
@@ -17,6 +18,7 @@ public class CameraCanvas : MonoBehaviour
     [SerializeField] InputButtonsCanvas inputHandeler;
     [SerializeField] GameObject buttonsConduc;
     [SerializeField] GameObject buttonsCalib;
+    [SerializeField] TextMeshProUGUI amountMoney;
 
     void Start()
     {
@@ -43,6 +45,8 @@ public class CameraCanvas : MonoBehaviour
                 volanteCamion.SetActive(true);
                 inventoryCamion.SetActive(true);
                 canvasCamera.worldCamera = cameraConduccion;
+
+                amountMoney.text = "$ " + camionPlayer.Dinero.ToString();
 
                 DisableButtonsCali();
                 EnableButtonsCondu();

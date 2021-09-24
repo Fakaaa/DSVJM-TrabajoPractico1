@@ -88463,6 +88463,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: eb132ae7734720048833f99facfca9cc, type: 3}
+      propertyPath: Particulas
+      value: 
+      objectReference: {fileID: 1497549076}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb132ae7734720048833f99facfca9cc, type: 3}
 --- !u!1001 &13232
@@ -88508,6 +88512,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: eb132ae7734720048833f99facfca9cc, type: 3}
+      propertyPath: Particulas
+      value: 
+      objectReference: {fileID: 1497549076}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb132ae7734720048833f99facfca9cc, type: 3}
 --- !u!1001 &13233
@@ -88549,6 +88557,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: eb132ae7734720048833f99facfca9cc, type: 3}
+      propertyPath: Particulas
+      value: 
+      objectReference: {fileID: 1497549076}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb132ae7734720048833f99facfca9cc, type: 3}
 --- !u!1001 &13234
@@ -88594,6 +88606,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: eb132ae7734720048833f99facfca9cc, type: 3}
+      propertyPath: Particulas
+      value: 
+      objectReference: {fileID: 1497549076}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb132ae7734720048833f99facfca9cc, type: 3}
 --- !u!1001 &13235
@@ -89334,6 +89350,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: eb132ae7734720048833f99facfca9cc, type: 3}
+      propertyPath: Particulas
+      value: 
+      objectReference: {fileID: 1497549076}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb132ae7734720048833f99facfca9cc, type: 3}
 --- !u!1001 &13251
@@ -89379,6 +89399,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: eb132ae7734720048833f99facfca9cc, type: 3}
+      propertyPath: Particulas
+      value: 
+      objectReference: {fileID: 1497549076}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb132ae7734720048833f99facfca9cc, type: 3}
 --- !u!1001 &13252
@@ -89424,6 +89448,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: eb132ae7734720048833f99facfca9cc, type: 3}
+      propertyPath: Particulas
+      value: 
+      objectReference: {fileID: 1497549076}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb132ae7734720048833f99facfca9cc, type: 3}
 --- !u!1001 &13253
@@ -89469,6 +89497,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: eb132ae7734720048833f99facfca9cc, type: 3}
+      propertyPath: Particulas
+      value: 
+      objectReference: {fileID: 1497549076}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb132ae7734720048833f99facfca9cc, type: 3}
 --- !u!1001 &13254
@@ -89514,6 +89546,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: eb132ae7734720048833f99facfca9cc, type: 3}
+      propertyPath: Particulas
+      value: 
+      objectReference: {fileID: 1497549076}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb132ae7734720048833f99facfca9cc, type: 3}
 --- !u!1001 &13255
@@ -89559,6 +89595,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: eb132ae7734720048833f99facfca9cc, type: 3}
+      propertyPath: Particulas
+      value: 
+      objectReference: {fileID: 1497549076}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb132ae7734720048833f99facfca9cc, type: 3}
 --- !u!1001 &13256
@@ -89604,6 +89644,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: eb132ae7734720048833f99facfca9cc, type: 3}
+      propertyPath: Particulas
+      value: 
+      objectReference: {fileID: 1497549076}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb132ae7734720048833f99facfca9cc, type: 3}
 --- !u!1001 &13257
@@ -89649,6 +89693,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: eb132ae7734720048833f99facfca9cc, type: 3}
+      propertyPath: Particulas
+      value: 
+      objectReference: {fileID: 1497549076}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb132ae7734720048833f99facfca9cc, type: 3}
 --- !u!1001 &13258
@@ -89694,6 +89742,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: eb132ae7734720048833f99facfca9cc, type: 3}
+      propertyPath: Particulas
+      value: 
+      objectReference: {fileID: 1497549076}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb132ae7734720048833f99facfca9cc, type: 3}
 --- !u!1001 &13259
@@ -89739,6 +89791,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: eb132ae7734720048833f99facfca9cc, type: 3}
+      propertyPath: Particulas
+      value: 
+      objectReference: {fileID: 1497549076}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb132ae7734720048833f99facfca9cc, type: 3}
 --- !u!1001 &13260
@@ -89784,6 +89840,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: eb132ae7734720048833f99facfca9cc, type: 3}
+      propertyPath: Particulas
+      value: 
+      objectReference: {fileID: 1497549076}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb132ae7734720048833f99facfca9cc, type: 3}
 --- !u!1001 &13261
@@ -89829,6 +89889,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: eb132ae7734720048833f99facfca9cc, type: 3}
+      propertyPath: Particulas
+      value: 
+      objectReference: {fileID: 1497549076}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb132ae7734720048833f99facfca9cc, type: 3}
 --- !u!1001 &13262
@@ -89874,6 +89938,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: eb132ae7734720048833f99facfca9cc, type: 3}
+      propertyPath: Particulas
+      value: 
+      objectReference: {fileID: 1497549076}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb132ae7734720048833f99facfca9cc, type: 3}
 --- !u!1001 &13263
@@ -89919,6 +89987,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: eb132ae7734720048833f99facfca9cc, type: 3}
+      propertyPath: Particulas
+      value: 
+      objectReference: {fileID: 1497549076}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb132ae7734720048833f99facfca9cc, type: 3}
 --- !u!1001 &13264
@@ -89964,6 +90036,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: eb132ae7734720048833f99facfca9cc, type: 3}
+      propertyPath: Particulas
+      value: 
+      objectReference: {fileID: 1497549076}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb132ae7734720048833f99facfca9cc, type: 3}
 --- !u!1001 &13265
@@ -90009,6 +90085,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: eb132ae7734720048833f99facfca9cc, type: 3}
+      propertyPath: Particulas
+      value: 
+      objectReference: {fileID: 1497549076}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb132ae7734720048833f99facfca9cc, type: 3}
 --- !u!1001 &13266
@@ -90054,6 +90134,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: eb132ae7734720048833f99facfca9cc, type: 3}
+      propertyPath: Particulas
+      value: 
+      objectReference: {fileID: 1497549076}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb132ae7734720048833f99facfca9cc, type: 3}
 --- !u!1001 &13267
@@ -90099,6 +90183,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: eb132ae7734720048833f99facfca9cc, type: 3}
+      propertyPath: Particulas
+      value: 
+      objectReference: {fileID: 1497549076}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb132ae7734720048833f99facfca9cc, type: 3}
 --- !u!1001 &13268
@@ -90144,6 +90232,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: eb132ae7734720048833f99facfca9cc, type: 3}
+      propertyPath: Particulas
+      value: 
+      objectReference: {fileID: 1497549076}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb132ae7734720048833f99facfca9cc, type: 3}
 --- !u!1001 &13269
@@ -90189,6 +90281,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: eb132ae7734720048833f99facfca9cc, type: 3}
+      propertyPath: Particulas
+      value: 
+      objectReference: {fileID: 1497549076}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb132ae7734720048833f99facfca9cc, type: 3}
 --- !u!1001 &13270
@@ -90975,6 +91071,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: eb132ae7734720048833f99facfca9cc, type: 3}
+      propertyPath: Particulas
+      value: 
+      objectReference: {fileID: 1497549076}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb132ae7734720048833f99facfca9cc, type: 3}
 --- !u!1001 &13288
@@ -91020,6 +91120,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: eb132ae7734720048833f99facfca9cc, type: 3}
+      propertyPath: Particulas
+      value: 
+      objectReference: {fileID: 1497549076}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb132ae7734720048833f99facfca9cc, type: 3}
 --- !u!1001 &13289
@@ -91065,6 +91169,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: eb132ae7734720048833f99facfca9cc, type: 3}
+      propertyPath: Particulas
+      value: 
+      objectReference: {fileID: 1497549076}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb132ae7734720048833f99facfca9cc, type: 3}
 --- !u!1001 &13290
@@ -91110,6 +91218,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: eb132ae7734720048833f99facfca9cc, type: 3}
+      propertyPath: Particulas
+      value: 
+      objectReference: {fileID: 1497549076}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb132ae7734720048833f99facfca9cc, type: 3}
 --- !u!1001 &13291
@@ -91155,6 +91267,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: eb132ae7734720048833f99facfca9cc, type: 3}
+      propertyPath: Particulas
+      value: 
+      objectReference: {fileID: 1497549076}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb132ae7734720048833f99facfca9cc, type: 3}
 --- !u!1001 &13292
@@ -91200,6 +91316,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: eb132ae7734720048833f99facfca9cc, type: 3}
+      propertyPath: Particulas
+      value: 
+      objectReference: {fileID: 1497549076}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb132ae7734720048833f99facfca9cc, type: 3}
 --- !u!1001 &13293
@@ -91245,6 +91365,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: eb132ae7734720048833f99facfca9cc, type: 3}
+      propertyPath: Particulas
+      value: 
+      objectReference: {fileID: 1497549076}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb132ae7734720048833f99facfca9cc, type: 3}
 --- !u!1001 &13294
@@ -91290,6 +91414,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: eb132ae7734720048833f99facfca9cc, type: 3}
+      propertyPath: Particulas
+      value: 
+      objectReference: {fileID: 1497549076}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb132ae7734720048833f99facfca9cc, type: 3}
 --- !u!1001 &13295
@@ -91335,6 +91463,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: eb132ae7734720048833f99facfca9cc, type: 3}
+      propertyPath: Particulas
+      value: 
+      objectReference: {fileID: 1497549076}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb132ae7734720048833f99facfca9cc, type: 3}
 --- !u!1001 &13296
@@ -91380,6 +91512,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: eb132ae7734720048833f99facfca9cc, type: 3}
+      propertyPath: Particulas
+      value: 
+      objectReference: {fileID: 1497549076}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb132ae7734720048833f99facfca9cc, type: 3}
 --- !u!1001 &13297
@@ -91425,6 +91561,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: eb132ae7734720048833f99facfca9cc, type: 3}
+      propertyPath: Particulas
+      value: 
+      objectReference: {fileID: 1497549076}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb132ae7734720048833f99facfca9cc, type: 3}
 --- !u!1001 &13298
@@ -91470,6 +91610,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: eb132ae7734720048833f99facfca9cc, type: 3}
+      propertyPath: Particulas
+      value: 
+      objectReference: {fileID: 1497549076}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb132ae7734720048833f99facfca9cc, type: 3}
 --- !u!1001 &13299
@@ -91515,6 +91659,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: eb132ae7734720048833f99facfca9cc, type: 3}
+      propertyPath: Particulas
+      value: 
+      objectReference: {fileID: 1497549076}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb132ae7734720048833f99facfca9cc, type: 3}
 --- !u!1001 &13300
@@ -91560,6 +91708,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: eb132ae7734720048833f99facfca9cc, type: 3}
+      propertyPath: Particulas
+      value: 
+      objectReference: {fileID: 1497549076}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb132ae7734720048833f99facfca9cc, type: 3}
 --- !u!1001 &13301
@@ -91605,6 +91757,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: eb132ae7734720048833f99facfca9cc, type: 3}
+      propertyPath: Particulas
+      value: 
+      objectReference: {fileID: 1497549076}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb132ae7734720048833f99facfca9cc, type: 3}
 --- !u!1001 &13302
@@ -91630,6 +91786,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 25.185547
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: eb132ae7734720048833f99facfca9cc, type: 3}
+      propertyPath: Particulas
+      value: 
+      objectReference: {fileID: 1497549076}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb132ae7734720048833f99facfca9cc, type: 3}
 --- !u!1 &15647202
@@ -118797,6 +118957,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1497534955}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1497549076 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100002, guid: 514ac53862939534083df9fb1d9b6d0d,
+    type: 3}
+  m_PrefabInstance: {fileID: 13083}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1501621713
 GameObject:
   m_ObjectHideFlags: 0

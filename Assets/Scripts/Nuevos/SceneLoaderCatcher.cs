@@ -9,6 +9,16 @@ public class SceneLoaderCatcher : MonoBehaviour
         slReference = FindObjectOfType<SceneLoader>();
     }
 
+    public void GoCredits()
+    {
+        slReference?.GoCredits();
+    }
+
+    public void GoMainMenu()
+    {
+        slReference?.GoMenu();
+    }
+
     public void SetSinglePlayer()
     {
         slReference?.SetGameModeSinglePlayer();
@@ -34,14 +44,9 @@ public class SceneLoaderCatcher : MonoBehaviour
         slReference?.SetDifficultyHard();
     }
 
-    public void LoadLevel()
+    public void FadeToLevel()
     {
-        slReference?.LoadLevel();
-    }
-
-    public void LoadScene(string sceneName)
-    {
-        slReference?.LoadScene(sceneName);
+        slReference?.FadeToLevel();
     }
 
     public void QuitGame()

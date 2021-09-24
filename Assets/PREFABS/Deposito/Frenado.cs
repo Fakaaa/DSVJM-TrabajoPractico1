@@ -22,7 +22,6 @@ public class Frenado : MonoBehaviour
 	// Use this for initialization
 	void Start () 
 	{
-		//RestaurarVel();
 		Frenar();
 	}
 	

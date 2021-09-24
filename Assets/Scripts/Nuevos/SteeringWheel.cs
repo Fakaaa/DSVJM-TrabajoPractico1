@@ -37,7 +37,7 @@ public class SteeringWheel : MonoBehaviour
         InitEventsSystem();
     }
 
-    void Update()
+    void FixedUpdate()
     {
         if (!wheelBeingHeld && !Mathf.Approximately(0f, wheelAngle))
         {

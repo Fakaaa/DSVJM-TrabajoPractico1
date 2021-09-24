@@ -16,6 +16,10 @@ public class SceneLoader : MonoBehaviour
     public string singlePlayerSceneName;
     public string multiPlayerSceneName;
 
+    public string nameSceneToLoad;
+
+    public Animator fadingAnim;
+
     public static SceneLoader Get()
     {
         return Instance;
@@ -32,39 +36,62 @@ public class SceneLoader : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
-    public void LoadScene(string sceneName)
+    public void SetSceneToLoad(string sceneName)
     {
-        Scene AuxSene = SceneManager.GetSceneByName(sceneName);
-        if(AuxSene != null)
-            SceneManager.LoadScene(sceneName);
+        nameSceneToLoad = sceneName;
     }
 
-    public void LoadLevel()
+    public void LoadScene()
     {
-        switch (gMode)
-        {
-            case GameMode.Single:   LoadScene(singlePlayerSceneName);
-                break;
-            case GameMode.Multi:    LoadScene(multiPlayerSceneName);
-                break;
-        }
+        FadeToLevelIn();
+        Scene AuxSene = SceneManager.GetSceneByName(nameSceneToLoad);
+        if (AuxSene != null)
+            SceneManager.LoadScene(nameSceneToLoad);
     }
 
-    public void LoadScene(int indexScene)
+    public void FadeToLevel()
     {
-        Scene AuxSene = SceneManager.GetSceneByBuildIndex(indexScene);
-        if(AuxSene != null)
-            SceneManager.LoadScene(indexScene);
+        fadingAnim.SetTrigger("Fade_OUT");
+    }
+
+    public void FadeToLevelIn()
+    {
+        fadingAnim.ResetTrigger("Fade_OUT");
+        fadingAnim.SetTrigger("Fade_IN");
     }
 
     public void SetGameModeSinglePlayer()
     {
         gMode = GameMode.Single;
+        SetSceneToLoad("SinglePlayer");
     }
 
     public void SetGameModeMultiPlayer()
     {
         gMode = GameMode.Multi;
+        SetSceneToLoad("LocalMultiplayer");
+    }
+
+    public void GoCredits()
+    {
+        SetSceneToLoad("Credits");
+    }
+
+    public void GoMenu()
+    {
+        SetSceneToLoad("MainMenu");
+    }
+
+    public void GoFinalPointsSinglePlayer()
+    {
+        SetSceneToLoad("PtsFinal Singleplayer");
+        FadeToLevel();
+    }
+
+    public void GoFinalPointsMultiLocal()
+    {
+        SetSceneToLoad("PtsFinal");
+        FadeToLevel();
     }
 
     public void SetDifficultyEasy()
