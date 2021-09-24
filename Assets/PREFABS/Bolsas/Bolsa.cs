@@ -1,5 +1,4 @@
 using UnityEngine;
-using System.Collections;
 
 public class Bolsa : MonoBehaviour
 {
@@ -13,7 +12,11 @@ public class Bolsa : MonoBehaviour
 	public GameObject Particulas;
 	public float TiempParts = 2.5f;
 
-	// Use this for initialization
+
+	Renderer renderBolsa;
+	Collider collBolsa;
+	ParticleSystem parSystem;
+
 	void Start () 
 	{
 		Monto = Pallet.Valores.Valor2;
@@ -21,10 +24,12 @@ public class Bolsa : MonoBehaviour
 		
 		if(Particulas != null)
 			Particulas.SetActive(false);
-			
+
+		renderBolsa = GetComponent<Renderer>();
+		collBolsa = GetComponent<Collider>();
+		parSystem = Particulas.GetComponent<ParticleSystem>();
 	}
 	
-	// Update is called once per frame
 	void Update ()
 	{
 		
@@ -33,10 +38,10 @@ public class Bolsa : MonoBehaviour
 			TiempParts -= Time.deltaTime;
 			if(TiempParts <= 0)
 			{
-				GetComponent<Renderer>().enabled = true;
-				GetComponent<Collider>().enabled = true;
-				
-				Particulas.GetComponent<ParticleSystem>().Stop();
+				renderBolsa.enabled = true;
+				collBolsa.enabled = true;
+
+				parSystem.Stop();
 				gameObject.SetActive(false);
 			}
 		}
@@ -58,15 +63,15 @@ public class Bolsa : MonoBehaviour
 	
 	public void Desaparecer()
 	{
-		Particulas.GetComponent<ParticleSystem>().Play();
+		parSystem.Play();
 		Desapareciendo = true;
 		
-		GetComponent<Renderer>().enabled = false;
-		GetComponent<Collider>().enabled = false;
+		renderBolsa.enabled = false;
+		collBolsa.enabled = false;
 		
 		if(Particulas != null)
 		{
-			Particulas.GetComponent<ParticleSystem>().Play();
+			parSystem.Play();
 		}
 	
 	}

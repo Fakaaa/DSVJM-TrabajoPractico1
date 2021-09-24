@@ -71,8 +71,6 @@ public class ControladorDeDescarga : MonoBehaviour
 				Bonus = 0;
 			}		
 		}
-		
-		
 	}
 	
 	//--------------------------------------------------------------//
@@ -183,7 +181,6 @@ public class ControladorDeDescarga : MonoBehaviour
 	public void FinAnimSalida()
 	{
 		//avisa cuando termino la animacion para que prosiga el juego
-		
 		for (int i = 0; i < Componentes.Length; i++)
 		{
 			Componentes[i].SetActiveRecursively(false);
@@ -196,7 +193,5 @@ public class ControladorDeDescarga : MonoBehaviour
 		Pj.CambiarAConduccion();
 		
 		Dep.Soltar();
-		
 	}
-	
 }

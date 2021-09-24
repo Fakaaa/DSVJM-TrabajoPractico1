@@ -3,21 +3,9 @@ using UnityEngine;
 public class ContrCalibracion : MonoBehaviour
 {
 	public Player Pj;
-	/*
-	public string ManoIzqName = "Left Hand";
-	public string ManoDerName = "Right Hand";
-	
-	bool StayIzq = false;
-	bool StayDer = false;
-	*/
-	/*
-	public float TiempCalib = 3;
-	float Tempo = 0;
-	*/
+
 	public float TiempEspCalib = 3;
 	float Tempo2 = 0;
-	
-	//bool EnTutorial = false;
 	
 	public enum Estados{Calibrando, Tutorial, Finalizado}
 	public Estados EstAct = Estados.Calibrando;
@@ -28,16 +16,16 @@ public class ContrCalibracion : MonoBehaviour
     public ManejoPallets palletsMover;
 	
 	GameManager GM;
-	
+
 	//----------------------------------------------------//
-	
-	// Use this for initialization
+	Renderer partidaRenderer;
+	Renderer llegadaRenderer;
+	Collider partidaCollider;
+	Collider llegadaCollider;
+	Renderer pRenderer;
+
 	void Start () 
 	{
-        /*
-		renderer.enabled = false;
-		collider.enabled = false;
-		*/
         palletsMover.enabled = false;
         Pj.ContrCalib = this;
 		
@@ -45,7 +33,13 @@ public class ContrCalibracion : MonoBehaviour
 		
 		P.CintaReceptora = Llegada.gameObject;
 		Partida.Recibir(P);
-		
+
+		partidaRenderer = Partida.GetComponent<Renderer>();
+		partidaCollider = Partida.GetComponent<Collider>();
+		llegadaRenderer = Llegada.GetComponent<Renderer>();
+		llegadaCollider = Llegada.GetComponent<Collider>();
+		pRenderer = P.GetComponent<Renderer>();
+
 		SetActivComp(false);
 	}
 	
@@ -64,20 +58,11 @@ public class ContrCalibracion : MonoBehaviour
 			}
 		}
 	}
-	
-	void FinCalibracion()
-	{
-		/*
-		Reiniciar();
-		GM.CambiarATutorial(Pj.IdPlayer);
-		*/
-	}
-	
+
 	public void IniciarTesteo()
 	{
 		EstAct = ContrCalibracion.Estados.Tutorial;
         palletsMover.enabled = true;
-        //Reiniciar();
     }
 	
 	public void FinTutorial()
@@ -89,12 +74,12 @@ public class ContrCalibracion : MonoBehaviour
 	
 	void SetActivComp(bool estado)
 	{
-		if(Partida.GetComponent<Renderer>() != null)
-			Partida.GetComponent<Renderer>().enabled = estado;
-		Partida.GetComponent<Collider>().enabled = estado;
-		if(Llegada.GetComponent<Renderer>() != null)
-			Llegada.GetComponent<Renderer>().enabled = estado;
-		Llegada.GetComponent<Collider>().enabled = estado;
-		P.GetComponent<Renderer>().enabled = estado;
+		if(partidaRenderer != null)
+			partidaRenderer.enabled = estado;
+		partidaCollider.enabled = estado;
+		if(llegadaRenderer != null)
+			llegadaRenderer.enabled = estado;
+		llegadaCollider.enabled = estado;
+		pRenderer.enabled = estado;
 	}
 }

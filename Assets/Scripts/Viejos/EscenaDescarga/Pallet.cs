@@ -18,9 +18,8 @@ public class Pallet : MonoBehaviour
 	public float TiempSmoot = 0.3f;
 	float TempoSmoot = 0;
 	public bool EnSmoot = false;
-	
+
 	//----------------------------------------------//
-	
 	void Start()
 	{
 		Pasaje();
@@ -40,8 +39,6 @@ public class Pallet : MonoBehaviour
 				}
 				else
 				{
-					print("smoot");
-					
 					if(Portador.GetComponent<ManoRecept>() != null)
 						transform.position = Portador.transform.position - Vector3.up * 1.2f;
 					else
@@ -51,8 +48,6 @@ public class Pallet : MonoBehaviour
 			}
 			else
 			{
-				print("crudo");
-				
 				if(Portador.GetComponent<ManoRecept>() != null)
 					transform.position = Portador.transform.position - Vector3.up * 1.2f;
 				else

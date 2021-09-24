@@ -13,10 +13,13 @@ public class Obstaculo : MonoBehaviour
 	bool Chocado = false;
 	bool Desapareciendo = false;
 
+	Rigidbody rig;
+	Collider collGo;
 	// Use this for initialization
 	void Start () 
 	{
-		
+		rig = GetComponent<Rigidbody>();
+		collGo = GetComponent<Collider>();
 	}
 	
 	// Update is called once per frame
@@ -29,15 +32,13 @@ public class Obstaculo : MonoBehaviour
 			{
 				Chocado = false;
 				Desapareciendo = true;
-				GetComponent<Rigidbody>().useGravity = false;
-				GetComponent<Collider>().enabled = false;
+				rig.useGravity = false;
+				collGo.enabled = false;
 			}
 		}
 		
 		if(Desapareciendo)
 		{
-			//animacion de desaparecer
-			
 			Tempo2 += T.GetDT();
 			if(Tempo2 > TiempDesapareciendo)
 			{
@@ -53,12 +54,4 @@ public class Obstaculo : MonoBehaviour
 			Chocado = true;
 		}
 	}
-	
-	//------------------------------------------------//
-	
-	protected virtual void Desaparecer()
-	{}
-	
-	protected virtual void Colision()
-	{}
 }
