@@ -109,18 +109,10 @@ public class GameManager : MonoBehaviour
                             }
                         }
 
-                        //Nuevo
                         if (PlayerInfo1.PJ == null && InputManager.Instance.GetInput("1").GetButton(InputCamion.Buttons.Start))
                         {
                             SetSinglePlayer();
                         }
-                        //Antiguo
-                        //if (PlayerInfo1.PJ == null && (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)))
-                        //{
-                        //    PlayerInfo1 = new PlayerInfo(0, Player1);
-                        //    PlayerInfo1.LadoAct = Visualizacion.Lado.Centro;
-                        //    SetPosicion(PlayerInfo1);
-                        //}
 
                         if (PlayerInfo1.PJ != null)
                         {
@@ -295,6 +287,8 @@ public class GameManager : MonoBehaviour
 
         player2Frenado.RestaurarVel();
         player2ContDireccion.Habilitado = true;
+
+        DificultiesPool.Instance?.ActivateObstacles(SceneLoader.Get().gameDifficulty);
     }
 
     void FinalizarCarrera()
