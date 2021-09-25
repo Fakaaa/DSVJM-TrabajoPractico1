@@ -12,6 +12,9 @@ public class FinalScoreMulti : MonoBehaviour
     {
         transferData = FindObjectOfType<TransferScores>();
 
+        if (transferData == null)
+            return;
+
         if(transferData.GetWinner() == transferData.GetPlayer1Money())
             winner.text = "¡Winner Player 1!";
         else

@@ -52,7 +52,7 @@ public class CameraCanvas : MonoBehaviour
                 inventoryCamion.SetActive(true);
                 canvasCamera.worldCamera = cameraConduccion;
 
-                //FrameRateGameplay();
+                FrameRateGameplay();
 
                 DisableButtonsCali();
                 EnableButtonsCondu();

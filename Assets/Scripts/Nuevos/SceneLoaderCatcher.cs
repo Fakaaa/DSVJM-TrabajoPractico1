@@ -11,11 +11,17 @@ public class SceneLoaderCatcher : MonoBehaviour
 
     public void GoCredits()
     {
+        if (slReference == null)
+            Debug.LogError("Null Reference en SlReference --> SceneLoaderCatcher");
+
         slReference?.GoCredits();
     }
 
     public void GoMainMenu()
     {
+        if (slReference == null)
+            Debug.LogError("Null Reference en SlReference --> SceneLoaderCatcher");
+
         slReference?.GoMenu();
     }
 
