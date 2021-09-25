@@ -328,6 +328,8 @@ public class GameManager : MonoBehaviour
                     //puntajes
                     DatosPartida.PtsGanador = Player1.Dinero;
                     DatosPartida.PtsPerdedor = Player2.Dinero;
+
+                    TransferScores.Instance?.TransferWinnerMultiplayer(Player1.Dinero);
                 }
                 else
                 {
@@ -340,6 +342,8 @@ public class GameManager : MonoBehaviour
                     //puntajes
                     DatosPartida.PtsGanador = Player2.Dinero;
                     DatosPartida.PtsPerdedor = Player1.Dinero;
+
+                    TransferScores.Instance?.TransferWinnerMultiplayer(Player2.Dinero);
                 }
 
                 player1Frenado.Frenar();

@@ -13,10 +13,12 @@ public class AcelerAuto : MonoBehaviour
 	public float TiempRecColl = 0;
 	float Tempo = 0;
 
+	Rigidbody rb;
+
 	// Use this for initialization
 	void Start () 
 	{
-	
+		rb = GetComponent<Rigidbody>();
 	}
 	
 	// Update is called once per frame
@@ -66,8 +68,8 @@ public class AcelerAuto : MonoBehaviour
 		{
 			Velocidad += AcelPorSeg * Time.fixedDeltaTime;
 		}
-		
-		GetComponent<Rigidbody>().AddForce(this.transform.forward * Velocidad);
+
+		rb.AddForce(this.transform.forward * Velocidad);
 	}
 	
 	 void OnCollisionEnter(Collision collision)

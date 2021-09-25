@@ -19,10 +19,16 @@ public class CameraCanvas : MonoBehaviour
     [SerializeField] GameObject buttonsConduc;
     [SerializeField] GameObject buttonsCalib;
     [SerializeField] TextMeshProUGUI amountMoney;
+    [SerializeField] TextMeshProUGUI FPSMetter;
+
+
+    public int avgFrameRate;
 
     void Start()
     {
         canvasCamera = GetComponent<Canvas>();
+
+        camionPlayer.actualizarDinero += UpdateMoneyPlayer;
     }
 
     void Update()
@@ -46,7 +52,7 @@ public class CameraCanvas : MonoBehaviour
                 inventoryCamion.SetActive(true);
                 canvasCamera.worldCamera = cameraConduccion;
 
-                amountMoney.text = "$ " + camionPlayer.Dinero.ToString();
+                //FrameRateGameplay();
 
                 DisableButtonsCali();
                 EnableButtonsCondu();
@@ -67,6 +73,24 @@ public class CameraCanvas : MonoBehaviour
             case Player.Estados.EnTutorial:
                 break;
         }
+    }
+
+    public void OnDestroy()
+    {
+        camionPlayer.actualizarDinero -= UpdateMoneyPlayer;
+    }
+
+    public void UpdateMoneyPlayer()
+    {
+        amountMoney.text = "$ " + camionPlayer.Dinero.ToString();
+    }
+
+    void FrameRateGameplay()
+    {
+        float current = 0;
+        current = Time.frameCount / Time.time;
+        avgFrameRate = (int)current;
+        FPSMetter.text = avgFrameRate.ToString() + " FPS";
     }
 
     void DisableStartButtons()

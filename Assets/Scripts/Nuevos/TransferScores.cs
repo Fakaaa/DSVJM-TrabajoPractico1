@@ -29,6 +29,7 @@ public class TransferScores : MonoBehaviour
 
     [SerializeField] int finalMoneyPJ1;
     [SerializeField] int finalMoneyPJ2;
+    [SerializeField] int winnerAmountMoney;
 
     public void SaveScorePlayer1(int finalAmount)
     {
@@ -37,6 +38,16 @@ public class TransferScores : MonoBehaviour
     public void SaveScorePlayer2(int finalAmount)
     {
         finalMoneyPJ2 = finalAmount;
+    }
+
+    public void TransferWinnerMultiplayer(int winnerMoney)
+    {
+        winnerAmountMoney = winnerMoney;
+    }
+
+    public int GetWinner()
+    {
+        return winnerAmountMoney;
     }
     public int GetPlayer1Money()
     {

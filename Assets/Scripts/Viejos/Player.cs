@@ -24,7 +24,9 @@ public class Player : MonoBehaviour
 
 	public delegate void AumentarCantBolsas();
 	public AumentarCantBolsas agregarBolsa;
-	
+
+	public delegate void ActualizarMonto();
+	public ActualizarMonto actualizarDinero;
 	//------------------------------------------------------------------//
 
 	// Use this for initialization
@@ -47,7 +49,8 @@ public class Player : MonoBehaviour
 			Dinero += (int)b.Monto;
 
 			agregarBolsa?.Invoke();
-			
+			actualizarDinero?.Invoke();
+
 			b.Desaparecer();
 			return true;
 		}
