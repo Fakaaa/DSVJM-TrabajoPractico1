@@ -1,8 +1,12 @@
 
 Se han utilizado:
 
-FACTORY PATTERN: 
+FACTORY PATTERN: Clase -> Input Manager
 Lo utilice en la clase Input manager para tener mayor facilidad en la creación de diferentes inputs para el camion, siendo asi el touch o las teclas del keyboard. Tambien logrando ahorrar muchisimo codigo inncesario y haciendo las cosas
 mas legibles.
 
-OBJECT POOL:
+OBJECT POOL:	Clase -> DifficultyPool
+Utilice object pool para facilitar la seleccion de la dificultad en el juego, haciendo que dependiendo de lo seleccionado se activen mas o menos obstaculos y cantidad de bolsas.
+
+SINGLETON:
+Lo utilize en multiples lugares, para de esta manera acceder facilmente a una clase la cual es muy utilizada y se transporta entre escenas, como seria mi Scene Loader, el encargado de realizar los cambios de niveles a menu etc.
