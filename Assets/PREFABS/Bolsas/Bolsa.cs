@@ -9,7 +9,7 @@ public class Bolsa : MonoBehaviour
 	Player Pj = null;
 	
 	bool Desapareciendo;
-	public GameObject Particulas;
+	public GameObject ParticulasPref;
 	public float TiempParts = 2.5f;
 
 
@@ -21,13 +21,9 @@ public class Bolsa : MonoBehaviour
 	{
 		Monto = Pallet.Valores.Valor2;
 		
-		
-		if(Particulas != null)
-			Particulas.SetActive(false);
 
 		renderBolsa = GetComponent<Renderer>();
 		collBolsa = GetComponent<Collider>();
-		parSystem = Particulas.GetComponent<ParticleSystem>();
 	}
 	
 	void Update ()
@@ -41,7 +37,6 @@ public class Bolsa : MonoBehaviour
 				renderBolsa.enabled = true;
 				collBolsa.enabled = true;
 
-				parSystem.Stop();
 				gameObject.SetActive(false);
 			}
 		}
@@ -52,27 +47,22 @@ public class Bolsa : MonoBehaviour
 	{
 		if(coll.tag == TagPlayer)
 		{
+			Debug.Log("BOLSA");
+
 			Pj = coll.GetComponent<Player>();
-			//if(IdPlayer == Pj.IdPlayer)
-			//{
-				if(Pj.AgregarBolsa(this))
-					Desaparecer();
-			//}
+			if(Pj.AgregarBolsa(this))
+            {
+				Instantiate(ParticulasPref, transform.position + (Vector3.up * 2), Quaternion.identity);
+				Desaparecer();
+            }
 		}
 	}
 	
 	public void Desaparecer()
 	{
-		parSystem.Play();
 		Desapareciendo = true;
 		
 		renderBolsa.enabled = false;
 		collBolsa.enabled = false;
-		
-		if(Particulas != null)
-		{
-			parSystem.Play();
-		}
-	
 	}
 }
